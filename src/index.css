@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 44 20% 96%;
+  --foreground: 44 6% 15%;
+  --muted: 44 12% 92%;
+  --muted-foreground: 44 6% 45%;
+  --popover: 44 20% 98%;
+  --popover-foreground: 44 6% 15%;
+  --card: 44 20% 98%;
+  --card-foreground: 44 6% 15%;
+  --border: 44 12% 88%;
+  --input: 44 12% 88%;
+  --primary: 142 35% 45%;
+  --primary-foreground: 44 20% 98%;
+  --secondary: 44 12% 92%;
+  --secondary-foreground: 44 6% 25%;
+  --accent: 44 12% 92%;
+  --accent-foreground: 44 6% 25%;
+  --destructive: 0 65% 65%;
+  --destructive-foreground: 44 20% 98%;
+  --ring: 142 35% 45%;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: linear-gradient(135deg, #faf8f5 0%, #f3ede4 50%, #e8f0e6 100%);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Custom classes for the cozy garden theme */
+.cozy-gradient {
+  background: linear-gradient(135deg, #faf8f5 0%, #f3ede4 50%, #e8f0e6 100%);
+}
+
+.recipe-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 165, 130, 0.2);
+}
+
+.recipe-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(138, 165, 130, 0.15);
+}
+
+/* Handwritten and script font styles */
+.font-handwritten {
+  font-family: 'Dancing Script', 'Amatic SC', 'Kalam', cursive, system-ui;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.font-script {
+  font-family: 'Great Vibes', 'Dancing Script', cursive, system-ui;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.font-natural {
+  font-family: 'Comfortaa', 'Nunito', sans-serif, system-ui;
+  font-weight: 400;
+}
+
+/* Enhanced header styling */
+h1, h2, h3, .header-title {
+  font-family: 'Dancing Script', 'Amatic SC', cursive, system-ui !important;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Recipe titles */
+.recipe-title {
+  font-family: 'Comfortaa', 'Nunito', sans-serif, system-ui !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.025em;
+}
+
+/* Blog post titles */
+.blog-title {
+  font-family: 'Comfortaa', 'Nunito', sans-serif, system-ui !important;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+/* Section headings in recipes and blog posts */
+.section-heading {
+  font-family: 'Comfortaa', 'Nunito', sans-serif, system-ui !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Tagline styling */
+.tagline {
+  font-family: 'Great Vibes', cursive, system-ui !important;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-style: italic;
+}
