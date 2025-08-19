@@ -64,7 +64,7 @@ function App() {
           element={<Printables />} 
         />
         <Route 
-          path="/privacy-policy" 
+          path="/privacy" 
           element={<PrivacyPolicy />} 
         />
       </Routes>
