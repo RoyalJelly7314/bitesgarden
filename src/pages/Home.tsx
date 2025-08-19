@@ -18,7 +18,6 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
   
   // Search state
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
 
   // Show hero section only when "All Recipes" is selected
   const showHero = selectedCategory === 'All Recipes';
@@ -511,7 +510,7 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {displayedRecipes.map((recipe, index) => (
+            {displayedRecipes.map((recipe) => (
               <RecipeCard
                 key={recipe.id}
                 recipe={recipe}

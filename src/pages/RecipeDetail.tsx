@@ -7,33 +7,28 @@ import { Separator } from '@/components/ui/separator';
 import { Clock, Users, ChefHat, ArrowLeft } from 'lucide-react';
 import { AdSpace } from '@/components/AdSpace';
 import { getRecipeMetadata, getRecipeUrlPath } from '@/lib/seo-utils';
-import { saveCurrentScrollPosition } from '@/lib/scroll-utils';
 
 export const RecipeDetail = () => {
   const { id, slug } = useParams<{ id: string; slug?: string }>();
   const navigate = useNavigate();
-  
+
   const recipe = recipes.find(r => r.id === id);
 
-  // Helper function to navigate back while preserving scroll position
   const navigateBackToHome = () => {
-    // We don't need to save scroll position here since we want to go back to the saved position
     navigate('/');
   };
 
-  // Scroll to top when recipe loads
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]); // Trigger when recipe ID changes
+  }, [id]);
 
-  // SEO: Update document title and meta tags
   useEffect(() => {
     if (recipe) {
       const metadata = getRecipeMetadata(recipe);
       document.title = metadata.title;
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
+
+      // Meta description
+      let metaDescription = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
@@ -41,8 +36,8 @@ export const RecipeDetail = () => {
       }
       metaDescription.setAttribute('content', metadata.description);
 
-      // Update meta keywords
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      // Meta keywords
+      let metaKeywords = document.querySelector('meta[name="keywords"]') as HTMLMetaElement | null;
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
@@ -50,13 +45,12 @@ export const RecipeDetail = () => {
       }
       metaKeywords.setAttribute('content', metadata.keywords);
 
-      // Redirect to SEO-friendly URL if accessing old format
       if (!slug && recipe) {
         const seoUrl = getRecipeUrlPath(recipe.id, recipe.title);
         navigate(seoUrl, { replace: true });
       }
 
-      // Add structured data for SEO
+      // Structured data
       const structuredData = {
         "@context": "https://schema.org/",
         "@type": "Recipe",
@@ -90,16 +84,16 @@ export const RecipeDetail = () => {
         }
       };
 
-      let script = document.querySelector('script[type="application/ld+json"]');
+      let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement | null;
       if (!script) {
-        script = document.createElement('script');
-        script.type = 'application/ld+json';
+        script = document.createElement('script') as HTMLScriptElement;
+        script.setAttribute('type', 'application/ld+json');
+
         document.head.appendChild(script);
       }
       script.textContent = JSON.stringify(structuredData);
     }
 
-    // Cleanup function to reset title
     return () => {
       document.title = 'Bites Garden - Where Every Bite Blooms';
     };
@@ -140,7 +134,6 @@ export const RecipeDetail = () => {
   return (
     <div className="min-h-screen cozy-gradient">
       <div className="container mx-auto px-4 py-8">
-        {/* Back Button */}
         <Button 
           variant="ghost" 
           onClick={navigateBackToHome} 
@@ -150,7 +143,6 @@ export const RecipeDetail = () => {
           Back to Recipes
         </Button>
 
-        {/* Recipe Header */}
         <div className="mb-8">
           <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
             <div>
@@ -166,7 +158,6 @@ export const RecipeDetail = () => {
             </Badge>
           </div>
 
-          {/* Tags */}
           <div className="flex flex-wrap gap-2">
             {recipe.tags.map((tag) => (
               <Badge key={tag} variant="secondary" className="text-sm">
@@ -177,12 +168,9 @@ export const RecipeDetail = () => {
         </div>
 
         <div className="flex gap-8">
-          {/* Main Content */}
           <div className="flex-1">
             <div className="grid gap-8 lg:grid-cols-5">
-              {/* Image and Meta Info */}
               <div className="lg:col-span-2 space-y-6">
-                {/* Recipe Image */}
                 <div className="relative h-80 rounded-lg overflow-hidden">
                   <img
                     src={recipe.image}
@@ -191,7 +179,6 @@ export const RecipeDetail = () => {
                   />
                 </div>
 
-                {/* Recipe Meta */}
                 <div className="recipe-card p-6 rounded-lg">
                   <h3 className="text-lg font-semibold mb-4 text-sage-800 font-handwritten">
                     Recipe Info
@@ -222,9 +209,7 @@ export const RecipeDetail = () => {
                 </div>
               </div>
 
-              {/* Recipe Details */}
               <div className="lg:col-span-3 space-y-8">
-                {/* Ingredients */}
                 <div className="recipe-card p-6 rounded-lg">
                   <h2 className="text-2xl font-semibold mb-6 text-sage-800 section-heading">
                     Ingredients
@@ -239,7 +224,6 @@ export const RecipeDetail = () => {
                   </div>
                 </div>
 
-                {/* Native In-Content Ad after Ingredients */}
                 <div className="flex justify-center">
                   <AdSpace 
                     size="native" 
@@ -250,7 +234,6 @@ export const RecipeDetail = () => {
 
                 <Separator />
 
-                {/* Instructions */}
                 <div className="recipe-card p-6 rounded-lg">
                   <h2 className="text-2xl font-semibold mb-6 text-sage-800 section-heading">
                     Instructions
@@ -266,8 +249,7 @@ export const RecipeDetail = () => {
                             {instruction}
                           </p>
                         </div>
-                        
-                        {/* Native In-Content Ad between steps 2 and 3 */}
+
                         {index === 1 && (
                           <div className="my-8 flex justify-center">
                             <AdSpace 
@@ -285,26 +267,15 @@ export const RecipeDetail = () => {
             </div>
           </div>
 
-          {/* Sidebar Ads - Desktop Only */}
           <aside className="hidden xl:block w-80 flex-shrink-0">
             <div className="sticky top-24 space-y-8">
-              <AdSpace 
-                size="sidebar" 
-                placement="Recipe Sidebar Top"
-              />
-              <AdSpace 
-                size="sidebar" 
-                placement="Recipe Sidebar Middle"
-              />
-              <AdSpace 
-                size="square" 
-                placement="Recipe Sidebar Bottom"
-              />
+              <AdSpace size="sidebar" placement="Recipe Sidebar Top" />
+              <AdSpace size="sidebar" placement="Recipe Sidebar Middle" />
+              <AdSpace size="square" placement="Recipe Sidebar Bottom" />
             </div>
           </aside>
         </div>
 
-        {/* Bottom of Post Ad */}
         <div className="mt-12 mb-8 flex justify-center">
           <AdSpace 
             size="banner" 
@@ -313,13 +284,8 @@ export const RecipeDetail = () => {
           />
         </div>
 
-        {/* Bottom Navigation */}
         <div className="mt-8 flex justify-center">
-          <Button 
-            onClick={navigateBackToHome} 
-            variant="outline"
-            className="gap-2"
-          >
+          <Button onClick={navigateBackToHome} variant="outline" className="gap-2">
             <ArrowLeft className="h-4 w-4" />
             Back to All Recipes
           </Button>
