@@ -26,7 +26,7 @@ export const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto">
           <div className="recipe-card p-8 rounded-lg">
             <h1 className="text-4xl font-bold text-sage-800 mb-6 text-center font-handwritten">
-              Privacy Policy & Terms
+              Privacy Policy
             </h1>
             
             <div className="text-sm text-sage-600 mb-4 text-center font-natural">
@@ -198,12 +198,12 @@ export const PrivacyPolicy = () => {
               <p className="text-base leading-relaxed">
                 If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
               </p>
-                             <div className="bg-sage-50 p-4 rounded-lg mt-4">
-                 <p className="text-base leading-relaxed">
-                   <strong>Email:</strong> privacy@bitesgarden.com<br />
-                   <strong>Website:</strong> bitesgarden.com
-                 </p>
-               </div>
+              <div className="bg-sage-50 p-4 rounded-lg mt-4">
+                <p className="text-base leading-relaxed">
+                  <strong>Email:</strong> privacy@bitesgarden.com<br />
+                  <strong>Website:</strong> bitesgarden.com
+                </p>
+              </div>
 
               <div className="mt-8 p-4 bg-sage-100 rounded-lg">
                 <p className="text-sm text-sage-700 text-center">
