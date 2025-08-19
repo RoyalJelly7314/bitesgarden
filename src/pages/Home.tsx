@@ -142,22 +142,34 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
             <div className="relative z-10 grid gap-8 lg:grid-cols-2 items-center">
               {/* Left Side - Content */}
               <div className="text-left">
-                {/* Logo + Tagline */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 text-center sm:text-left">
-                  <img
-                    src="/logofork.jpg"
-                    alt="Bites Garden Logo"
-                    className="h-10 w-10 sm:h-16 sm:w-auto object-contain mb-2 sm:mb-0 sm:mr-4 rounded-lg shadow-sm"
-                  />
-                  <div>
-                    <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-sage-800 header-title mb-1 sm:mb-2">
-                      Bites Garden
-                    </h1>
-                    <p className="text-sm sm:text-lg text-sage-600 tagline italic">
-                      Where Every Bite Blooms
-                    </p>
-                  </div>
-                </div>
+                                 {/* Logo + Tagline */}
+                 <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 text-center sm:text-left">
+                   {/* Mobile: Logo only */}
+                   <div className="sm:hidden">
+                     <img
+                       src="/logofork.jpg"
+                       alt="Bites Garden Logo"
+                       className="h-16 w-auto object-contain rounded-lg shadow-sm"
+                     />
+                   </div>
+                   
+                   {/* Desktop: Logo + Text */}
+                   <div className="hidden sm:flex sm:flex-row sm:items-start">
+                     <img
+                       src="/logofork.jpg"
+                       alt="Bites Garden Logo"
+                       className="h-16 w-auto object-contain mr-4 rounded-lg shadow-sm"
+                     />
+                     <div>
+                       <h1 className="text-3xl md:text-4xl font-bold text-sage-800 header-title mb-2">
+                         Bites Garden
+                       </h1>
+                       <p className="text-lg text-sage-600 tagline italic">
+                         Where Every Bite Blooms
+                       </p>
+                     </div>
+                   </div>
+                 </div>
 
                 {/* Intro Blurb */}
                 <p className="text-lg text-muted-foreground mb-8 font-natural leading-relaxed">
