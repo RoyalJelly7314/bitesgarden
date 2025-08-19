@@ -26,7 +26,7 @@ export const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto">
           <div className="recipe-card p-8 rounded-lg">
             <h1 className="text-4xl font-bold text-sage-800 mb-6 text-center font-handwritten">
-              Privacy Policy
+              Privacy Policy & Terms
             </h1>
             
             <div className="text-sm text-sage-600 mb-4 text-center font-natural">
