@@ -145,13 +145,13 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
                 {/* Logo + Tagline */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 text-center sm:text-left">
                   {/* Mobile: Logo + Text (centered) */}
-                  <div className="sm:hidden">
+                  <div className="sm:hidden flex flex-col items-center">
                     <img
                       src="/logofork.jpg"
                       alt="Bites Garden Logo"
                       className="h-16 w-auto object-contain rounded-lg shadow-sm mb-3"
                     />
-                    <div>
+                    <div className="text-center">
                       <h1 className="text-2xl font-bold text-sage-800 header-title mb-1">
                         Bites Garden
                       </h1>
