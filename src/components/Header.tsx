@@ -42,7 +42,8 @@ export const Header: React.FC<HeaderProps> = ({ selectedCategory, onCategorySele
             alt="Bites Garden Logo" 
             className="h-12 w-auto object-contain"
           />
-          <div>
+          {/* Desktop: Logo + Text */}
+          <div className="hidden sm:block">
             <h1 className="text-3xl font-bold text-sage-800 header-title">
               Bites Garden
             </h1>
