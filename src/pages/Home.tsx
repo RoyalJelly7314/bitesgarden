@@ -511,7 +511,10 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
           {/* View All Recipes Button */}
           <div className="text-center mt-12">
             <Button
-              onClick={() => navigate('/recipes')}
+              onClick={() => {
+                const recipesSection = document.getElementById('recipes-section');
+                recipesSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
               variant="outline"
               className="border-sage-600 text-sage-600 hover:bg-sage-50 font-natural px-8 py-3"
             >
