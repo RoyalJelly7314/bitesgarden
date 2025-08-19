@@ -618,6 +618,14 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
           <p className="text-xs text-muted-foreground mt-2 font-natural">
             © 2024 Bites Garden. Bringing families together through food.
           </p>
+          <div className="mt-4">
+            <a 
+              href="/privacy-policy" 
+              className="text-xs text-sage-600 hover:text-sage-800 underline font-natural"
+            >
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </footer>
     </main>
