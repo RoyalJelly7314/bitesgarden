@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RecipeCard } from '@/components/RecipeCard';
 import { AdSpace } from '@/components/AdSpace';
+import { PrivacyPolicyModal } from '@/components/PrivacyPolicyModal';
 import { recipes } from '@/data/recipes';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -18,6 +19,9 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
   
   // Search state
   const [searchQuery, setSearchQuery] = useState('');
+  
+  // Privacy Policy Modal state
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
   // Show hero section only when "All Recipes" is selected
   const showHero = selectedCategory === 'All Recipes';
@@ -618,16 +622,22 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
           <p className="text-xs text-muted-foreground mt-2 font-natural">
             © 2024 Bites Garden. Bringing families together through food.
           </p>
-          <div className="mt-4">
-                         <a 
-               href="/privacy" 
-               className="text-xs text-sage-600 hover:text-sage-800 underline font-natural"
+                     <div className="mt-4">
+             <button 
+               onClick={() => setIsPrivacyModalOpen(true)}
+               className="text-xs text-sage-600 hover:text-sage-800 underline font-natural cursor-pointer"
              >
                Privacy Policy
-             </a>
-          </div>
-        </div>
-      </footer>
-    </main>
-  );
-};
+             </button>
+           </div>
+                 </div>
+       </footer>
+       
+       {/* Privacy Policy Modal */}
+       <PrivacyPolicyModal 
+         isOpen={isPrivacyModalOpen}
+         onClose={() => setIsPrivacyModalOpen(false)}
+       />
+     </main>
+   );
+ };

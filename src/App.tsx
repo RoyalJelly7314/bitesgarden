@@ -6,7 +6,6 @@ import { RecipeDetail } from './pages/RecipeDetail';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
 import { Printables } from './pages/Printables';
-import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { AdSpace } from './components/AdSpace';
 import { MobileStickyAd } from './components/MobileStickyAd';
 
@@ -62,10 +61,6 @@ function App() {
         <Route 
           path="/printables" 
           element={<Printables />} 
-        />
-        <Route 
-          path="/privacy" 
-          element={<PrivacyPolicy />} 
         />
       </Routes>
 
