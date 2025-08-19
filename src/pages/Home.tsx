@@ -5,7 +5,7 @@ import { AdSpace } from '@/components/AdSpace';
 import { recipes } from '@/data/recipes';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Leaf, ChefHat, Sparkles, Loader2 } from 'lucide-react';
+import { Leaf, ChefHat, Sparkles, Loader2, Search, X } from 'lucide-react';
 import { getRecipeUrlPath, findRecipeById } from '@/lib/seo-utils';
 import { restoreScrollPosition, saveCurrentScrollPosition, saveRecipeCardScrollPosition, cleanupExpiredScrollPositions } from '@/lib/scroll-utils';
 
@@ -16,16 +16,38 @@ interface HomeProps {
 export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
   const navigate = useNavigate();
   
-  // Filter recipes based on selected category
-  const filteredRecipes = useMemo(() => {
-    if (selectedCategory === 'All Recipes') {
-      return recipes;
-    }
-    return recipes.filter(recipe => recipe.category === selectedCategory);
-  }, [selectedCategory]);
+  // Search state
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
 
   // Show hero section only when "All Recipes" is selected
   const showHero = selectedCategory === 'All Recipes';
+  
+  // Filter recipes based on selected category and search query
+  const filteredRecipes = useMemo(() => {
+    let filtered = recipes;
+    
+    // First filter by category
+    if (selectedCategory !== 'All Recipes') {
+      filtered = recipes.filter(recipe => recipe.category === selectedCategory);
+    }
+    
+    // Then filter by search query if there is one
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase().trim();
+      filtered = filtered.filter(recipe => 
+        recipe.title.toLowerCase().includes(query) ||
+        recipe.description.toLowerCase().includes(query) ||
+        recipe.ingredients.some(ingredient => 
+          ingredient.toLowerCase().includes(query)
+        ) ||
+        recipe.category.toLowerCase().includes(query) ||
+        recipe.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+    }
+    
+    return filtered;
+  }, [selectedCategory, searchQuery]);
 
   // Infinite scroll state
   const [displayedRecipes, setDisplayedRecipes] = useState<typeof recipes>([]);
@@ -182,8 +204,47 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
         </section>
       )}
 
-      {/* Featured Recipes Grid - Only show on "All Recipes" */}
-      {showHero && (
+      {/* Search Bar */}
+      <section className="mb-12">
+        <div className="max-w-2xl mx-auto">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-sage-400" />
+            <input
+              type="text"
+              placeholder="Search recipes, ingredients, or categories..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-12 py-3 border border-sage-200 rounded-full focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent text-sage-800 placeholder-sage-400 font-natural shadow-sm hover:shadow-md transition-shadow"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-sage-100 rounded-full transition-colors"
+              >
+                <X className="h-4 w-4 text-sage-400 hover:text-sage-600" />
+              </button>
+            )}
+          </div>
+          {searchQuery && (
+            <div className="mt-3 text-center">
+              <p className="text-sm text-sage-600 font-natural">
+                Found {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} for "{searchQuery}"
+                {filteredRecipes.length > 0 && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="ml-2 text-sage-500 hover:text-sage-700 underline font-medium"
+                  >
+                    Clear search
+                  </button>
+                )}
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Featured Recipes Grid - Only show on "All Recipes" and when not searching */}
+      {showHero && !searchQuery && (
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
@@ -388,7 +449,7 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
       <section id="recipes-section" className="mb-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
-            {selectedCategory}
+            {searchQuery ? `Search Results for "${searchQuery}"` : selectedCategory}
           </h2>
           <p className="text-muted-foreground font-natural text-lg">
             {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
@@ -401,75 +462,65 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
         </div>
       </section>
 
-      {/* Recipes Grid */}
-      {filteredRecipes.length > 0 ? (
+      {/* What's New Section - Show 4 latest recipes */}
+      {!searchQuery && (
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
+              What's New
+            </h2>
+            <p className="text-lg text-muted-foreground font-natural">
+              Fresh recipes added to our collection
+            </p>
+          </div>
+
+          {/* Latest 4 Recipes Grid */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {recipes.slice(0, 4).map((recipe) => (
+              <RecipeCard
+                key={recipe.id}
+                recipe={recipe}
+                currentCategory={selectedCategory}
+              />
+            ))}
+          </div>
+
+          {/* View All Recipes Button */}
+          <div className="text-center mt-12">
+            <Button
+              onClick={() => navigate('/recipes')}
+              variant="outline"
+              className="border-sage-600 text-sage-600 hover:bg-sage-50 font-natural px-8 py-3"
+            >
+              View All Recipes
+            </Button>
+          </div>
+        </section>
+      )}
+
+      {/* Search Results */}
+      {searchQuery && (
         <div className="space-y-8">
-          {/* First ad banner before recipes */}
+          {/* First ad banner before search results */}
           <div className="flex justify-center mb-8">
             <AdSpace 
               size="leaderboard" 
-              placement="Pre-Recipes Banner" 
+              placement="Pre-Search Results Banner" 
               className="mx-auto"
             />
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {displayedRecipes.map((recipe, index) => (
-              <>
-                <RecipeCard
-                  key={recipe.id}
-                  recipe={recipe}
-                  currentCategory={selectedCategory}
-                />
-                
-                {/* Insert ads at strategic positions */}
-                {/* After every 4th recipe on mobile/tablet, 6th on desktop */}
-                {(index + 1) % 4 === 0 && (index + 1) < displayedRecipes.length && (
-                  <div className="col-span-full my-6 flex justify-center">
-                    <AdSpace 
-                      size="banner" 
-                      placement={`In-Grid Ad ${Math.floor((index + 1) / 4)}`}
-                      className="mx-auto"
-                    />
-                  </div>
-                )}
-                
-                {/* Additional square ads every 8 recipes */}
-                {(index + 1) % 8 === 0 && (index + 1) < displayedRecipes.length && (
-                  <div className="col-span-full my-6 flex justify-center">
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
-                      <AdSpace 
-                        size="square" 
-                        placement={`Square Ad A-${Math.floor((index + 1) / 8)}`}
-                      />
-                      <AdSpace 
-                        size="square" 
-                        placement={`Square Ad B-${Math.floor((index + 1) / 8)}`}
-                      />
-                      <AdSpace 
-                        size="square" 
-                        placement={`Square Ad C-${Math.floor((index + 1) / 8)}`}
-                        className="hidden lg:block"
-                      />
-                    </div>
-                  </div>
-                )}
-                
-                {/* Native ads every 12 recipes */}
-                {(index + 1) % 12 === 0 && (index + 1) < displayedRecipes.length && (
-                  <div className="col-span-full my-6">
-                    <AdSpace 
-                      size="native" 
-                      placement={`Native Content Ad ${Math.floor((index + 1) / 12)}`}
-                      className="mx-auto max-w-2xl"
-                    />
-                  </div>
-                )}
-              </>
+              <RecipeCard
+                key={recipe.id}
+                recipe={recipe}
+                currentCategory={selectedCategory}
+              />
             ))}
           </div>
           
-          {/* Loading indicator */}
+          {/* Loading indicator for search results */}
           {isLoading && (
             <div className="flex justify-center items-center py-8">
               <Loader2 className="h-8 w-8 animate-spin text-sage-600 mr-2" />
@@ -477,7 +528,7 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
             </div>
           )}
           
-          {/* Load more button (fallback for users who prefer clicking) */}
+          {/* Load more button for search results */}
           {!isLoading && hasMore && (
             <div className="flex justify-center py-8">
               <Button
@@ -490,17 +541,17 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
             </div>
           )}
           
-          {/* End of recipes indicator */}
+          {/* End of search results indicator */}
           {!hasMore && displayedRecipes.length > RECIPES_PER_PAGE && (
             <div className="text-center py-8">
               <p className="text-sage-600 font-natural text-lg">
-                🍴 You've seen all our delicious recipes! 🍴
+                🍴 You've seen all the search results! 🍴
               </p>
               <div className="mt-6 space-y-6">
                 <div className="flex justify-center">
                   <AdSpace 
                     size="banner" 
-                    placement="End of Content Banner" 
+                    placement="End of Search Results Banner" 
                     className="mx-auto"
                   />
                 </div>
@@ -520,17 +571,30 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
             </div>
           )}
         </div>
-      ) : (
+      )}
+
+      {/* No Search Results */}
+      {searchQuery && filteredRecipes.length === 0 && (
         <div className="text-center py-12">
           <div className="text-sage-300 mb-4">
             <ChefHat className="h-16 w-16 mx-auto" />
           </div>
           <h3 className="text-xl font-semibold text-sage-600 mb-2 font-handwritten">
-            No recipes found
+            No recipes found for your search
           </h3>
           <p className="text-muted-foreground font-natural">
-            Try selecting a different category to see more recipes.
+            Try searching for different ingredients or recipe names.
           </p>
+          
+          <div className="mt-4">
+            <Button
+              onClick={() => setSearchQuery('')}
+              variant="outline"
+              className="border-sage-600 text-sage-600 hover:bg-sage-50 font-natural"
+            >
+              Clear Search
+            </Button>
+          </div>
           
           {/* Ad for empty state */}
           <div className="mt-8 flex justify-center">
