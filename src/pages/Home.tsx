@@ -496,8 +496,8 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
         </div>
       </section>
 
-      {/* What's New Section - Show 4 latest recipes */}
-      {!searchQuery && (
+      {/* What's New Section - Show 4 latest recipes - ONLY on home page */}
+      {!searchQuery && selectedCategory === 'All Recipes' && (
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
