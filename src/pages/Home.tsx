@@ -33,6 +33,9 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
     // First filter by category
     if (selectedCategory !== 'All Recipes') {
       filtered = recipes.filter(recipe => recipe.category === selectedCategory);
+      console.log(`Filtering by category: ${selectedCategory}, found ${filtered.length} recipes`);
+    } else {
+      console.log(`Showing all recipes: ${filtered.length} total`);
     }
     
     // Then filter by search query if there is one
@@ -60,10 +63,18 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
 
   // Initialize displayed recipes when category changes
   useEffect(() => {
+    // Reset to first page when category changes
     const initialRecipes = filteredRecipes.slice(0, RECIPES_PER_PAGE);
     setDisplayedRecipes(initialRecipes);
     setHasMore(filteredRecipes.length > RECIPES_PER_PAGE);
-  }, [filteredRecipes]);
+    
+    console.log(`Category changed to: ${selectedCategory}`);
+    console.log(`Filtered recipes: ${filteredRecipes.length}`);
+    console.log(`Displayed recipes: ${initialRecipes.length}`);
+    
+    // Scroll to top when category changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [filteredRecipes, selectedCategory]);
 
   // Load more recipes function
   const loadMoreRecipes = useCallback(() => {
