@@ -535,6 +535,61 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
         </section>
       )}
 
+      {/* Category Recipes Section - Display filtered recipes by category */}
+      {!searchQuery && (
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
+              {selectedCategory === 'All Recipes' ? 'All Recipes' : `${selectedCategory} Recipes`}
+            </h2>
+            <p className="text-lg text-muted-foreground font-natural">
+              {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
+            </p>
+          </div>
+
+          {/* Filtered Recipes Grid */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {displayedRecipes.map((recipe) => (
+              <RecipeCard
+                key={recipe.id}
+                recipe={recipe}
+                currentCategory={selectedCategory}
+              />
+            ))}
+          </div>
+
+          {/* Load More Button for Category Recipes */}
+          {!isLoading && hasMore && (
+            <div className="flex justify-center py-8">
+              <Button
+                onClick={loadMoreRecipes}
+                variant="outline"
+                className="border-sage-600 text-sage-600 hover:bg-sage-50 font-natural px-8 py-3"
+              >
+                Load More {selectedCategory === 'All Recipes' ? 'Recipes' : selectedCategory}
+              </Button>
+            </div>
+          )}
+
+          {/* Loading indicator for category recipes */}
+          {isLoading && (
+            <div className="flex justify-center items-center py-8">
+              <Loader2 className="h-8 w-8 animate-spin text-sage-600 mr-2" />
+              <span className="text-sage-600 font-natural">Loading more recipes...</span>
+            </div>
+          )}
+
+          {/* End of category recipes indicator */}
+          {!hasMore && displayedRecipes.length > RECIPES_PER_PAGE && (
+            <div className="text-center py-8">
+              <p className="text-sage-600 font-natural text-lg">
+                🍴 You've seen all the {selectedCategory === 'All Recipes' ? 'recipes' : selectedCategory.toLowerCase()}! 🍴
+              </p>
+            </div>
+          )}
+        </section>
+      )}
+
       {/* Search Results */}
       {searchQuery && (
         <div className="space-y-8">
