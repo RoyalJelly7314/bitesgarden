@@ -96,7 +96,9 @@ export const recipes: Recipe[] = [
   {
     id: '5',
     title: 'Morning Garden Scramble',
-    description: 'Fluffy scrambled eggs with fresh herbs and vegetables from the garden.',
+    description: `Start your day with a burst of color, flavor, and nourishment with this Morning Garden Scramble. Inspired by the freshness of a backyard garden, this wholesome breakfast combines fluffy scrambled eggs with a medley of seasonal vegetables like bell peppers, spinach, cherry tomatoes, and onions. It's a simple yet vibrant dish that comes together in minutes and delivers a balanced mix of protein, fiber, and natural sweetness.
+
+Whether you're fueling up for a busy day or enjoying a slow weekend morning, the Morning Garden Scramble is endlessly customizable and pairs perfectly with toast, avocado, or fresh herbs from your kitchen window. It's a great way to reduce food waste too—just toss in whatever veggies you have on hand. Healthy, satisfying, and full of garden goodness, this is a breakfast that blooms on your plate.`,
     image: '/eggs.jpg',
     category: 'Breakfast',
     cookTime: '10 mins',
