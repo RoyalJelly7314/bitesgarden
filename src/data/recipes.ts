@@ -25,7 +25,11 @@ export const recipes: Recipe[] = [
   {
     id: '2',
     title: 'Herb-Crusted Honey Glazed Salmon',
-    description: 'Fresh salmon fillet with a delicate herb crust and sweet honey glaze.',
+    description: `Elegant, flavorful, and surprisingly simple — Herb-Crusted Honey Glazed Salmon is a showstopper that's just as perfect for a cozy dinner as it is for entertaining. Fresh salmon fillets are brushed with a sweet and tangy honey glaze, then topped with a fragrant herb crust that crisps beautifully in the oven.
+
+The result? A tender, flaky fish with a golden, caramelized finish and a burst of fresh flavor in every bite.
+
+Serve it alongside roasted veggies, rice, or a light salad for a balanced, beautiful meal that feels like something special — without the fuss.`,
     image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=80',
     category: 'Dinner',
     cookTime: '20 mins',
@@ -56,7 +60,9 @@ export const recipes: Recipe[] = [
   {
     id: '4',
     title: 'Rustic Apple Cinnamon Tart',
-    description: 'A free-form tart filled with spiced apples and a buttery, flaky crust.',
+    description: `Golden, crisp, and delicately spiced — this Rustic Apple Cinnamon Tart is everything cozy baked into one beautiful dessert. With tender apple slices nestled in a flaky, free-form crust and sprinkled with cinnamon sugar, it's a simple yet impressive treat that tastes like home.
+
+No fancy techniques, just real ingredients and warm flavors that shine. Perfect for autumn evenings, weekend baking, or anytime you crave something sweet and nostalgic.`,
     image: '/appletart.jpg',
     category: 'Desserts',
     cookTime: '40 mins',
@@ -129,7 +135,13 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '7',
     title: 'Fluffy Pancakes',
-    description: 'Light, fluffy pancakes perfect for a weekend breakfast treat with your favorite toppings.',
+    description: `There's something magical about a stack of golden, fluffy pancakes in the morning. Light, airy, and irresistibly soft, these pancakes are the kind that melt in your mouth and make any breakfast feel special.
+
+Whether it's a cozy weekend brunch or a weekday treat, this recipe delivers perfect results every time with simple pantry staples. What makes these pancakes stand out is their dreamy texture — pillowy on the inside with just the right amount of crisp on the edges.
+
+A splash of vanilla and a touch of sweetness give them that classic, homemade flavor, while a drizzle of maple syrup or a handful of fresh berries takes them to the next level. They're quick to make, endlessly customizable, and sure to become a staple in your kitchen.
+
+Fluffy, comforting, and delicious — this is pancake perfection.`,
     image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80',
     category: 'Breakfast',
     cookTime: '15 mins',
@@ -162,7 +174,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '8',
     title: 'Cinnamon French Toast',
-    description: 'Crispy, golden French toast with warm cinnamon flavor, perfect for a cozy breakfast.',
+    description: `Wake up to the comforting aroma of warm cinnamon and golden toast with this deliciously simple Cinnamon French Toast. Crispy on the outside, soft and custardy on the inside, this breakfast classic is the perfect way to turn everyday ingredients into something truly special.
+
+Thick slices of bread are soaked in a rich cinnamon-vanilla egg mixture, then pan-fried to perfection for that beautiful golden-brown finish. Whether you're using fresh or slightly stale bread, this recipe is forgiving and full of flavor. Topped with a dusting of powdered sugar, a drizzle of maple syrup, or a handful of fresh fruit, it's a meal that feels like a warm hug on a plate.
+
+Perfect for slow weekend mornings, brunch with friends, or even breakfast-for-dinner, Cinnamon French Toast is a timeless favorite that never goes out of style.`,
     image: '/cinamon.jpg',
     category: 'Breakfast',
     cookTime: '10 mins',
@@ -192,7 +208,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '9',
     title: 'Avocado Toast with Egg',
-    description: 'Creamy avocado on crispy toast topped with a perfectly cooked egg for a healthy breakfast.',
+    description: `Simple, satisfying, and endlessly customizable, Avocado Toast with Egg is the ultimate go-to breakfast for busy mornings or relaxed brunches. Creamy mashed avocado layered over crispy toasted bread sets the stage for a perfectly cooked egg — whether you prefer it sunny-side up, poached, or soft-boiled.
+
+This dish strikes a beautiful balance of healthy fats, protein, and fiber, keeping you full and energized for hours. A sprinkle of sea salt, a dash of chili flakes, or a squeeze of lemon adds just the right kick, while optional toppings like microgreens, feta, or hot sauce let you make it your own.
+
+Minimal effort, maximum flavor — this recipe is a modern classic that proves healthy can also be delicious. It's no surprise avocado toast has become a kitchen staple around the world.`,
     image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500&q=80',
     category: 'Breakfast',
     cookTime: '5 mins',
@@ -220,7 +240,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '10',
     title: 'Breakfast Burrito',
-    description: 'A hearty, portable breakfast burrito filled with scrambled eggs, cheese, and fresh vegetables.',
+    description: `Kickstart your day with a warm, satisfying Breakfast Burrito that wraps all your morning favorites into one delicious bundle. Packed with scrambled eggs, melty cheese, crispy potatoes, and your choice of protein like bacon, sausage, or black beans, this burrito is a complete meal you can hold in your hand.
+
+Wrapped in a soft tortilla and easy to take on the go, it's perfect for busy mornings, weekend brunches, or even meal prep for the week ahead. Add some avocado, salsa, or hot sauce for an extra flavor boost, or customize it with your favorite fillings to make it just right.
+
+Comforting, filling, and easy to make, the Breakfast Burrito is a crowd-pleaser that delivers every time — whether you're feeding a family or just yourself.`,
     image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=500&q=80',
     category: 'Breakfast',
     cookTime: '10 mins',
@@ -252,7 +276,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '11',
     title: 'Overnight Oats',
-    description: 'Creamy, no-cook oats prepared the night before for a nutritious grab-and-go breakfast.',
+    description: `Overnight Oats are the perfect no-fuss breakfast — creamy, filling, and ready to enjoy the moment you wake up. Made by soaking rolled oats in milk or yogurt overnight, this chilled breakfast becomes rich and spoonable by morning, no cooking required.
+
+Customizable with your favorite add-ins like fresh fruit, nuts, seeds, or a swirl of peanut butter, overnight oats are both nourishing and endlessly adaptable. They're a great source of fiber, energy, and satisfaction, making them ideal for busy mornings or meal prep throughout the week.
+
+Whether you prefer them fruity, chocolatey, or nutty, Overnight Oats offer a deliciously wholesome start to your day — with barely any effort at all.`,
     image: '/oats.jpeg',
     category: 'Breakfast',
     cookTime: '0 mins',
@@ -281,7 +309,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '12',
     title: 'Smoothie Bowl',
-    description: 'A thick, creamy smoothie served in a bowl and topped with fresh fruits and crunchy granola.',
+    description: `Start your morning with a burst of color and nutrition with this refreshing Smoothie Bowl — thick, creamy, and topped with your favorite crunchy, fruity, and nutty extras. Unlike a regular smoothie, this bowl is spoonable and satisfying, turning your drinkable breakfast into a beautiful, energizing meal.
+
+Blended with frozen fruits and a splash of milk or yogurt, each bowl becomes a blank canvas for toppings like granola, chia seeds, fresh berries, coconut flakes, or a drizzle of nut butter. It's as pretty as it is powerful — loaded with vitamins, antioxidants, and fiber to keep you full and glowing all morning.
+
+Perfect for warm weather mornings, healthy habits, or just treating yourself to something colorful and delicious, the Smoothie Bowl is a feel-good favorite that never gets boring.`,
     image: '/smutibowl.jpg',
     category: 'Breakfast',
     cookTime: '0 mins',
@@ -308,7 +340,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '13',
     title: 'Greek Yogurt Parfait',
-    description: 'Layers of creamy Greek yogurt, crunchy granola, and fresh berries for a perfect breakfast.',
+    description: `Layered, lovely, and loaded with goodness — the Greek Yogurt Parfait is a simple yet elegant breakfast (or snack!) that feels like a treat but fuels like a health food. Creamy Greek yogurt is stacked with juicy fresh fruit, crunchy granola, and a drizzle of honey for the perfect mix of textures and flavors.
+
+It's protein-rich, naturally sweetened, and endlessly customizable. Whether you're making it in a jar for a grab-and-go option or serving it in a glass for a pretty brunch, this parfait is as versatile as it is delicious.
+
+Healthy, satisfying, and ready in minutes, a Greek Yogurt Parfait is proof that wholesome food can be both beautiful and effortless.`,
     image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&q=80',
     category: 'Breakfast',
     cookTime: '0 mins',
@@ -336,7 +372,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '14',
     title: 'Chia Pudding',
-    description: 'Creamy, nutrient-packed pudding made with chia seeds that gel overnight for a perfect texture.',
+    description: `Chia Pudding is a creamy, make-ahead breakfast or snack that's as nourishing as it is easy to love. Made with just chia seeds and milk (plus a touch of sweetener if you like), it transforms overnight into a thick, pudding-like treat packed with fiber, omega-3s, and plant-based protein.
+
+Mild in flavor and endlessly customizable, chia pudding is a perfect base for layering with fruits, nuts, nut butters, or even a bit of chocolate. Whether you enjoy it plain and simple or dressed up with toppings, it's a wholesome option that feels indulgent without the guilt.
+
+Great for busy mornings, meal prep, or a light dessert, this little jar of goodness is proof that simple ingredients can do magical things.`,
     image: '/chia.jpg',
     category: 'Breakfast',
     cookTime: '0 mins',
@@ -363,7 +403,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '15',
     title: 'Bagels with Cream Cheese & Toppings',
-    description: 'Classic toasted bagels with cream cheese and your choice of sweet or savory toppings.',
+    description: `Sometimes the simplest breakfasts are the most satisfying, and Bagels with Cream Cheese & Toppings are a perfect example. With their soft, chewy texture and golden crust, bagels make a delicious base for a creamy layer of tangy cream cheese — and from there, the topping options are endless.
+
+Whether you go savory with smoked salmon and capers, or sweet with fresh berries and honey, bagels offer a balance of comfort and creativity. They're ideal for leisurely brunches, quick weekday mornings, or assembling a beautiful bagel board for guests.
+
+Customizable, filling, and always a crowd-pleaser, this is a breakfast classic that never goes out of style.`,
     image: '/bagels.jpg',
     category: 'Breakfast',
     cookTime: '5 mins',
@@ -389,7 +433,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '16',
     title: 'Banana Bread',
-    description: 'Moist, sweet banana bread perfect for breakfast or an afternoon treat with coffee.',
+    description: `Banana Bread is the ultimate cozy comfort — soft, moist, and bursting with the sweet, nostalgic aroma of ripe bananas and warm spices. Whether you enjoy it plain, studded with chocolate chips, or sprinkled with crunchy nuts, it's a timeless recipe that brings instant homey vibes to any kitchen.
+
+Perfect for using up overripe bananas, this loaf bakes up golden and fragrant, ready to be sliced for breakfast, an afternoon snack, or even dessert. It's easy to make, forgiving to tweak, and always satisfying with a cup of coffee or tea.
+
+Whether you bake it for loved ones or just for yourself, Banana Bread is more than just a recipe — it's a hug in every slice.`,
     image: '/banana.jpg',
     category: 'Breakfast',
     cookTime: '55 mins',
@@ -423,7 +471,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '18',
     title: 'Garlic Butter Pasta with Parmesan',
-    description: 'Simple yet elegant pasta dish with aromatic garlic butter and fresh Parmesan cheese.',
+    description: `Rich, buttery, and bursting with garlic flavor, Garlic Butter Pasta with Parmesan is the kind of comfort food that's as easy to make as it is hard to resist. With just a handful of pantry ingredients, this dish comes together in minutes but tastes like something truly special.
+
+The pasta is coated in a silky garlic butter sauce, finished with a generous shower of grated Parmesan for that perfect salty-savory finish. It's a go-to recipe for busy nights, last-minute dinners, or whenever you're craving something cozy and satisfying without the fuss.
+
+Simple, flavorful, and endlessly comforting — this is pasta at its best.`,
     image: '/garlicpasta.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
@@ -452,7 +504,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '19',
     title: 'Honey Garlic Chicken Thighs',
-    description: 'Juicy chicken thighs glazed with a sweet and savory honey garlic sauce.',
+    description: `Sticky, savory, and a little bit sweet, Honey Garlic Chicken Thighs are a deliciously satisfying dish that brings bold flavor with minimal effort. Juicy, tender chicken thighs are pan-seared to golden perfection, then glazed in a rich honey garlic sauce that clings to every bite.
+
+This recipe strikes the perfect balance — the honey adds a touch of sweetness, the garlic brings depth and warmth, and the soy sauce rounds it all out with a salty umami kick. It's a family-friendly favorite that pairs beautifully with rice, veggies, or noodles.
+
+Whether it's a quick weeknight dinner or part of a cozy weekend meal, this dish proves that simple ingredients can deliver big flavor.`,
     image: '/thighs.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
@@ -483,7 +539,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '20',
     title: 'Pan-Seared Steak with Herb Butter',
-    description: 'Perfectly seared steak finished with aromatic herb butter for a restaurant-quality meal.',
+    description: `Few things feel as indulgent and satisfying as a perfectly Pan-Seared Steak with Herb Butter. Golden-crusted on the outside, juicy and tender on the inside, this classic dish brings restaurant-quality flavor right to your home kitchen — no grill required.
+
+The magic is in the simplicity: a hot pan, a well-seasoned cut of steak, and a generous spoonful of garlic herb butter that melts luxuriously over the top. It adds richness, fragrance, and that melt-in-your-mouth finish that makes every bite unforgettable.
+
+Whether you're celebrating something special or just craving a cozy, hearty dinner, this steak delivers comfort and elegance in equal measure.`,
     image: '/steak.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
@@ -519,7 +579,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '21',
     title: 'Chicken Fried Rice',
-    description: 'Classic fried rice with tender chicken, vegetables, and scrambled eggs in savory soy sauce.',
+    description: `Chicken Fried Rice is the ultimate homemade takeout-style comfort food — quick, satisfying, and full of flavor in every bite. With tender pieces of chicken, fluffy rice, colorful veggies, and savory soy sauce all stir-fried together, this dish transforms simple ingredients into a warm, crave-worthy meal.
+
+It's the perfect way to use up leftover rice and create something that feels both effortless and delicious. A hint of sesame oil and scrambled egg bring that signature fried rice taste, while the chicken adds heartiness that makes it a complete dish.
+
+Whether you're cooking for one or feeding a family, this cozy skillet favorite is always a hit — and it comes together in under 30 minutes.`,
     image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=500&q=80',
     category: 'Lunch',
     cookTime: '20 mins',
@@ -553,7 +617,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '22',
     title: 'Creamy One-Pot Chicken Pasta',
-    description: 'Rich and creamy pasta dish cooked all in one pot with tender chicken and Parmesan.',
+    description: `Creamy, comforting, and all made in a single pot — Creamy One-Pot Chicken Pasta is the ultimate cozy dinner for busy nights. Juicy chicken pieces are simmered with tender pasta in a rich, garlicky cream sauce that hugs every bite.
+
+This dish brings together the heartiness of a home-cooked meal with the ease of minimal cleanup. There's no need to boil pasta separately or juggle multiple pans — everything comes together right in one pot, soaking up all the savory flavor along the way.
+
+It's a satisfying, feel-good dinner that's as perfect for weeknights as it is for curling up with something delicious at the end of a long day.`,
     image: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&q=80',
     category: 'Lunch',
     cookTime: '25 mins',
@@ -585,7 +653,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '23',
     title: 'Garlic Butter Chicken Bites',
-    description: 'Tender, bite-sized chicken pieces sautéed in aromatic garlic butter with paprika.',
+    description: `Garlic Butter Chicken Bites are juicy, golden, and packed with rich, buttery flavor — the kind of quick and satisfying recipe that turns simple ingredients into something irresistible. Each bite-sized piece is seared to perfection, then tossed in a fragrant garlic butter sauce that's impossible to resist.
+
+They're perfect for busy weeknights, meal prep, or as a crowd-pleasing appetizer. Serve them over rice, pasta, salad, or just enjoy straight from the skillet — no judgment here!
+
+This is comfort food done fast, without sacrificing a bit of flavor.`,
     image: '/bites.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
@@ -614,7 +686,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '24',
     title: 'Chicken & Broccoli Stir-Fry',
-    description: 'Quick and healthy stir-fry with tender chicken and crisp broccoli in savory sauce.',
+    description: `Simple, fresh, and full of flavor — Chicken & Broccoli Stir-Fry is a classic for a reason. Tender chicken strips and vibrant broccoli florets come together in a savory stir-fry sauce that coats every bite with just the right balance of salty, sweet, and umami.
+
+This one-pan wonder is perfect for busy evenings when you want something wholesome and comforting without the fuss. It's quick to make, packed with protein and greens, and delicious served over rice or noodles.
+
+Whether you're meal prepping or making dinner on the fly, this dish brings cozy, home-cooked flavor to your table in under 30 minutes.`,
     image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80',
     category: 'Lunch',
     cookTime: '20 mins',
@@ -649,7 +725,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '25',
     title: 'One-Pot Taco Rice',
-    description: 'Flavorful Mexican-inspired rice dish with ground meat, tomatoes, and warm spices.',
+    description: `One-Pot Taco Rice is everything you love about taco night — bold flavors, hearty ingredients, and comforting spices — all simmered together in a single cozy pot. With seasoned ground meat, fluffy rice, tender beans, and melty cheese, it's a full-flavored meal that's both satisfying and easy to make.
+
+Perfect for weeknights, casual dinners, or meal prep, this dish brings Tex-Mex comfort to your table without the mess of multiple pans. Top it with sour cream, avocado, or a squeeze of lime for a personal twist.
+
+It's fast, filling, and the kind of dish that makes you want seconds (and maybe thirds).`,
     image: '/tacorice.jpg',
     category: 'Lunch',
     cookTime: '25 mins',
@@ -686,7 +766,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '26',
     title: 'Crispy Potato Wedges with Dipping Sauce',
-    description: 'Golden, crispy potato wedges seasoned with garlic and paprika, perfect as a side or snack.',
+    description: `Golden on the outside, fluffy on the inside — Crispy Potato Wedges are the ultimate homemade comfort snack or side dish. Baked (or air-fried) to crispy perfection and seasoned just right, these wedges deliver all the crunch and flavor of fries, without the deep fryer.
+
+Paired with a creamy, zesty dipping sauce, they're perfect for game night, family dinners, or anytime you're craving something warm, salty, and satisfying.
+
+Easy to prep and even easier to love, this is the kind of recipe that disappears fast — so you might want to make a double batch.`,
     image: '/potato.jpeg',
     category: 'Lunch',
     cookTime: '35 mins',
@@ -723,7 +807,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '27',
     title: 'Grilled Cheese with Tomato Soup',
-    description: 'Classic comfort food combo of golden grilled cheese sandwich with creamy tomato soup.',
+    description: `Few pairings are as cozy and comforting as Grilled Cheese with Tomato Soup — a timeless classic that never goes out of style. Buttery, golden-brown bread hugs perfectly melted cheese, while the rich, velvety tomato soup offers the perfect dip with every bite.
+
+It's the kind of meal that warms you from the inside out, whether you're curled up on a rainy day or just craving something familiar and satisfying.
+
+Simple ingredients, quick prep, and soul-soothing flavor — this duo is a hug in a bowl (and sandwich).`,
     image: '/tomatosoup.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
@@ -760,7 +848,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '48',
     title: 'Classic Mac \'n\' Cheese',
-    description: 'Creamy, cheesy comfort food at its finest - homemade mac and cheese that beats any box!',
+    description: `Creamy, cheesy, and irresistibly nostalgic — Classic Mac 'n' Cheese is the ultimate comfort food that brings everyone to the table. With tender pasta smothered in a rich, velvety cheese sauce, it's a dish that feels like a warm hug in every bite.
+
+Whether served as a hearty main or a crowd-pleasing side, this timeless recipe is always a hit. Made with simple ingredients and baked to golden perfection, it's easy enough for weeknights yet special enough for holidays.
+
+One forkful and you'll understand why it's a forever favorite.`,
     image: '/mac.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
@@ -793,7 +885,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '49',
     title: 'Creamy One-Pot Tomato Pasta',
-    description: 'Rich and creamy tomato pasta made entirely in one pot for easy cleanup and maximum flavor.',
+    description: `When comfort meets convenience, you get Creamy One-Pot Tomato Pasta — a rich, flavorful dish that's as easy to make as it is satisfying to eat. With tender pasta simmered right in a creamy tomato sauce, this recipe keeps cleanup minimal and flavor maximum.
+
+It's perfect for busy weeknights, cozy dinners, or those moments when you want something delicious without the fuss. A touch of garlic, herbs, and a swirl of cream bring the whole dish together in under 30 minutes.
+
+Simple, creamy, and packed with flavor — it's a one-pot wonder you'll want to make again and again.`,
     image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&q=80',
     category: 'Lunch',
     cookTime: '20 mins',
@@ -827,7 +923,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '50',
     title: 'Easy Chickpea Curry',
-    description: 'Aromatic and creamy chickpea curry with coconut milk and warming spices - perfect comfort food!',
+    description: `Warm, fragrant, and full of plant-powered goodness — Easy Chickpea Curry is a go-to recipe for when you want something nourishing, satisfying, and packed with flavor. Made with tender chickpeas simmered in a spiced coconut-tomato sauce, it's a comforting meal that comes together quickly in one pot.
+
+Whether served over fluffy rice or scooped up with warm naan, this curry is both budget-friendly and deeply satisfying. It's naturally vegan, easily customizable, and perfect for meal prep or weeknight dinners.
+
+Simple ingredients, bold flavor — this is comfort food with a kick.`,
     image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=80',
     category: 'Lunch',
     cookTime: '20 mins',
@@ -863,7 +963,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '51',
     title: 'Spaghetti Aglio e Olio with Green Olives',
-    description: 'Classic Italian pasta with garlic, olive oil, and a Mediterranean twist of green olives.',
+    description: `Simple yet bold, Spaghetti Aglio e Olio with Green Olives is a rustic Italian classic with a zesty twist. Featuring golden garlic gently sautéed in olive oil, al dente pasta, and briny green olives, this dish is proof that a few humble ingredients can create something truly special.
+
+Perfect for a quick weeknight dinner or a late-night craving, it comes together in under 20 minutes and never disappoints. The olives add a pop of flavor that takes this traditional recipe to the next level.
+
+Bright, garlicky, and utterly satisfying — it's pasta at its most elegant and effortless.`,
     image: '/spageti.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
@@ -893,7 +997,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '28',
     title: 'Creamy Garlic Shrimp Pasta',
-    description: 'Succulent shrimp in a rich, creamy garlic sauce served over tender pasta.',
+    description: `Decadent yet easy, Creamy Garlic Shrimp Pasta is the kind of dish that turns an ordinary night into something a little more special. Juicy shrimp are sautéed in butter and garlic, then tossed in a silky cream sauce with tender pasta and a hint of parmesan.
+
+It's luxurious comfort in a bowl — the kind of meal that tastes like it came from your favorite restaurant but takes just 30 minutes at home.
+
+Perfect for date night, family dinners, or when you simply crave something indulgent and satisfying.`,
     image: '/shrimp.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
@@ -925,7 +1033,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '29',
     title: 'Baked Lemon Herb Chicken Thighs',
-    description: 'Juicy chicken thighs baked with fresh herbs and bright lemon flavors.',
+    description: `Bright, flavorful, and effortlessly delicious — Baked Lemon Herb Chicken Thighs are a go-to for busy weeknights or relaxed weekend dinners. Marinated in zesty lemon juice, garlic, and a blend of fragrant herbs, these chicken thighs come out of the oven juicy on the inside with a perfectly golden, crispy skin.
+
+It's a fuss-free recipe with big flavor, using simple ingredients you likely already have in your kitchen.
+
+Pair it with roasted veggies, rice, or a crisp salad for a balanced meal that's as comforting as it is satisfying.`,
     image: '/lemontajs.jpg',
     category: 'Dinner',
     cookTime: '35 mins',
@@ -954,7 +1066,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '30',
     title: 'One-Pot Chicken & Rice',
-    description: 'Complete dinner cooked in one pot with tender chicken, flavorful rice, and vegetables.',
+    description: `Comfort food doesn't get cozier than this One-Pot Chicken & Rice — a simple, soul-warming dish that brings everything together in one pan. Tender chicken simmers with fragrant rice, onions, garlic, and just the right touch of herbs and spices for maximum flavor with minimal cleanup.
+
+It's a classic meal that feels like home: nourishing, satisfying, and easy enough for a weeknight dinner.
+
+Whether you're feeding a family or meal prepping for the week, this one-pot wonder is sure to become a regular favorite.`,
     image: '/onepot.jpeg',
     category: 'Dinner',
     cookTime: '30 mins',
@@ -988,7 +1104,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '31',
     title: 'Ground Beef Tacos',
-    description: 'Quick and flavorful tacos with seasoned ground beef and fresh toppings.',
+    description: `A weeknight hero and party favorite, Ground Beef Tacos are the ultimate crowd-pleaser. Seasoned with a smoky, savory blend of spices, the juicy beef is perfectly tucked into warm taco shells and topped with all your favorites — think shredded lettuce, cheese, salsa, and a squeeze of lime.
+
+Quick to make and endlessly customizable, these tacos bring bold flavor with very little effort.
+
+Whether it's Taco Tuesday or a casual weekend meal, this classic recipe always hits the spot.`,
     image: '/taco.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
@@ -1029,7 +1149,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '32',
     title: 'Creamy Chicken & Mushroom Skillet',
-    description: 'Rich and creamy skillet dinner with tender chicken and savory mushrooms.',
+    description: `Rich, savory, and oh-so-satisfying, this Creamy Chicken & Mushroom Skillet is a cozy classic that's ready in under 30 minutes. Tender chicken breasts are seared to golden perfection, then simmered in a luscious garlic cream sauce with earthy mushrooms and fresh herbs.
+
+It's the kind of dish that feels elegant but couldn't be easier to make — all in one skillet for less cleanup and more flavor.
+
+Serve it over pasta, rice, or mashed potatoes for a meal that's perfect for a quiet night in or casual dinner with friends.`,
     image: '/skilet.jpg',
     category: 'Dinner',
     cookTime: '30 mins',
@@ -1062,7 +1186,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '33',
     title: 'Easy Baked Salmon with Veggies',
-    description: 'Healthy baked salmon with colorful vegetables, all cooked on one sheet pan.',
+    description: `Simple, nutritious, and full of flavor, this Easy Baked Salmon with Veggies is your go-to sheet pan dinner. Succulent salmon fillets are seasoned just right and baked alongside a colorful medley of vegetables — all in one tray for easy prep and even easier cleanup.
+
+With minimal ingredients and maximum goodness, it's perfect for busy weeknights or when you're craving something light yet satisfying.
+
+Healthy eating doesn't get much more delicious (or convenient) than this.`,
     image: '/salmon.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
@@ -1093,7 +1221,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '34',
     title: 'Stuffed Bell Peppers',
-    description: 'Colorful bell peppers stuffed with seasoned ground meat, rice, and cheese.',
+    description: `A wholesome classic that never goes out of style, Stuffed Bell Peppers are as beautiful as they are satisfying. Tender bell peppers are filled with a hearty mix of ground meat, rice, herbs, and savory seasonings, then baked until perfectly tender and golden on top.
+
+It's a complete meal packed into a colorful, edible bowl — ideal for family dinners, meal prep, or impressing guests with something simple yet special.
+
+Comfort food with a fresh twist, straight from the oven.`,
     image: '/pepers.jpg',
     category: 'Dinner',
     cookTime: '45 mins',
@@ -1127,7 +1259,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '35',
     title: 'Beef & Broccoli Stir-Fry',
-    description: 'Classic Chinese-style stir-fry with tender beef and crisp broccoli in savory sauce.',
+    description: `Fast, flavorful, and better than takeout, this Beef & Broccoli Stir-Fry is a weeknight hero. Thin slices of tender beef are stir-fried with crisp broccoli in a savory garlic-soy sauce that clings to every bite.
+
+It's ready in under 30 minutes, packed with protein and veggies, and perfect over a bed of rice or noodles. Plus, you only need one pan — easy cleanup, big flavor.
+
+A delicious way to skip the delivery and still satisfy those cravings.`,
     image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80',
     category: 'Dinner',
     cookTime: '15 mins',
@@ -1163,7 +1299,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '36',
     title: 'Spaghetti Bolognese',
-    description: 'Classic Italian meat sauce with rich tomatoes, herbs, and tender ground meat over pasta.',
+    description: `A timeless Italian favorite, Spaghetti Bolognese brings together rich, slow-simmered meat sauce and perfectly cooked pasta for the ultimate comfort meal. Made with ground beef, tomatoes, garlic, and herbs, this hearty dish fills your kitchen with cozy aromas and your plate with deep, savory flavor.
+
+Whether it's a weeknight dinner or a Sunday family meal, this classic never disappoints — simple ingredients, soulful results.
+
+Serve it with a sprinkle of Parmesan and crusty bread for a meal that feels like home.`,
     image: '/spagheti.jpg',
     category: 'Dinner',
     cookTime: '40 mins',
@@ -1199,7 +1339,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '37',
     title: 'Cheesy Baked Ziti',
-    description: 'Comforting baked pasta with rich meat sauce, creamy ricotta, and melted mozzarella.',
+    description: `Cheesy Baked Ziti is everything you love about comfort food — warm, bubbly, and loaded with layers of flavor. Tender ziti pasta is smothered in a rich tomato sauce, blended with creamy ricotta, and topped with gooey melted mozzarella for that perfect golden crust.
+
+It's the kind of meal that fills the house with delicious aromas and brings everyone running to the table. Whether you're feeding a family or prepping for the week, this baked classic never fails.
+
+Easy to make, hard to resist — pasta night just got better.`,
     image: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&q=80',
     category: 'Dinner',
     cookTime: '40 mins',
@@ -1234,7 +1378,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '38',
     title: 'Chocolate Chip Cookies',
-    description: 'Classic homemade chocolate chip cookies with the perfect chewy texture.',
+    description: `Soft in the middle, golden at the edges, and loaded with melty chocolate — these Chocolate Chip Cookies are the timeless treat that never goes out of style. Whether you're baking a batch for cozy nights in, lunchbox surprises, or spontaneous sweet cravings, they always hit the spot.
+
+Made with simple pantry staples and ready in under 30 minutes, this recipe delivers that perfect balance of chewiness and crunch with every bite.
+
+Warm, gooey, and utterly comforting — just like homemade should be.`,
     image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&q=80',
     category: 'Desserts',
     cookTime: '12 mins',
@@ -1267,7 +1415,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '39',
     title: 'Classic Brownies',
-    description: 'Rich, fudgy brownies that are perfectly chocolatey and irresistible.',
+    description: `Fudgy, chocolaty, and irresistibly rich — these Classic Brownies are the ultimate homemade indulgence. With a crackly top, dense center, and deep cocoa flavor, they strike the perfect balance between chewy and gooey.
+
+Whether served warm with a scoop of ice cream or packed as a sweet snack, these brownies are a comforting favorite that never disappoints.
+
+Simple to make, impossible to resist — this is brownie bliss, baked fresh.`,
     image: '/brownie.jpg',
     category: 'Desserts',
     cookTime: '28 mins',
@@ -1301,7 +1453,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '40',
     title: 'Vanilla Cupcakes',
-    description: 'Light and fluffy vanilla cupcakes perfect for any celebration.',
+    description: `Light, fluffy, and delicately sweet — these Vanilla Cupcakes are a timeless treat perfect for any occasion. Whether you're celebrating something special or simply craving a homemade dessert, these cupcakes bring cozy bakery vibes straight to your kitchen.
+
+Topped with a swirl of creamy frosting and a sprinkle of joy, each bite is soft, tender, and full of classic vanilla flavor.
+
+Easy to make, even easier to love — a little bite of happiness in every cupcake.`,
     image: '/vanilakap.jpg',
     category: 'Desserts',
     cookTime: '22 mins',
@@ -1341,7 +1497,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '41',
     title: 'No-Bake Cheesecake',
-    description: 'Creamy, delicious cheesecake that requires no baking - perfect for summer!',
+    description: `Silky, smooth, and effortlessly delicious — this No-Bake Cheesecake is the perfect dessert when you want something rich and indulgent without turning on the oven. With a buttery graham cracker crust and a luscious cream cheese filling, it's chilled to perfection for a refreshing, crowd-pleasing treat.
+
+Whether topped with fresh berries, chocolate drizzle, or left plain and elegant, every bite melts in your mouth.
+
+Simple to make, impossible to resist — a cool slice of comfort, ready whenever you are.`,
     image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&q=80',
     category: 'Desserts',
     cookTime: '0 mins',
@@ -1378,7 +1538,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '42',
     title: 'Strawberry Shortcake',
-    description: 'Classic summer dessert with fresh strawberries, fluffy biscuits, and whipped cream.',
+    description: `Sweet, sun-kissed strawberries, fluffy whipped cream, and tender, buttery biscuits come together in this classic Strawberry Shortcake. It's the kind of dessert that feels like a warm summer afternoon, no matter the season.
+
+With every bite, you get a balance of juicy fruit, airy cream, and just the right crumbly softness — simple ingredients layered into pure bliss.
+
+A nostalgic favorite with a homemade touch — bright, beautiful, and made to share.`,
     image: '/shortcake.jpg',
     category: 'Desserts',
     cookTime: '18 mins',
@@ -1416,7 +1580,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '44',
     title: 'Chocolate Mug Cake',
-    description: 'Quick and easy single-serve chocolate cake made in the microwave in just minutes!',
+    description: `Rich, gooey, and ready in minutes — this Chocolate Mug Cake is the ultimate single-serve dessert for those sudden chocolate cravings. Made with pantry staples and cooked right in the microwave, it's soft, fudgy, and deeply satisfying.
+
+Perfect for late-night treats or when you just need something warm and sweet, fast — no oven, no mess, just pure chocolate comfort in a mug.
+
+One spoonful and you'll be hooked — a little magic, one mug at a time.`,
     image: '/magcake.jpg',
     category: 'Desserts',
     cookTime: '90 seconds',
@@ -1446,7 +1614,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '45',
     title: 'Apple Crisp',
-    description: 'Warm, comforting apple crisp with a golden oat topping - perfect for fall!',
+    description: `Golden, buttery oat topping over tender, cinnamon-spiced apples — this Apple Crisp is the kind of dessert that fills the kitchen with the scent of comfort.
+
+It's simple, rustic, and endlessly cozy — like a warm hug in dessert form. Whether served alone or with a scoop of vanilla ice cream melting on top, it's the perfect treat for crisp autumn days or any time you're craving something sweet and nostalgic.
+
+Easy to make, impossible to resist.`,
     image: '/applecrisp.jpg',
     category: 'Desserts',
     cookTime: '40 mins',
@@ -1483,7 +1655,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '46',
     title: 'Peanut Butter Cookies',
-    description: 'Simple and delicious peanut butter cookies with that classic criss-cross pattern.',
+    description: `Soft, chewy, and packed with rich peanut flavor — these Peanut Butter Cookies are a timeless classic for good reason. With their signature crisscross tops and melt-in-your-mouth texture, they strike the perfect balance between sweet and salty.
+
+Made with just a few simple ingredients, they come together quickly and always disappear fast. Whether enjoyed with a cold glass of milk or tucked into a lunchbox, these cookies bring cozy, homemade joy in every bite.
+
+A childhood favorite that never goes out of style.`,
     image: '/pinat.jpg',
     category: 'Desserts',
     cookTime: '12 mins',
@@ -1516,7 +1692,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '47',
     title: 'Lemon Bars',
-    description: 'Tangy and sweet lemon bars with a buttery shortbread crust.',
+    description: `These Lemon Bars are sunshine in dessert form — bright, tangy, and irresistibly sweet. With a buttery shortbread crust and a silky lemon curd topping, each bite delivers the perfect balance of tart and sweet.
+
+They're simple to make yet feel like a special treat, ideal for spring gatherings, afternoon tea, or whenever you need a burst of citrusy joy. Dust them with powdered sugar for a touch of elegance, and watch them disappear fast.
+
+Fresh, vibrant, and utterly refreshing — these bars are a slice of happiness.`,
     image: '/lemonbars.jpg',
     category: 'Desserts',
     cookTime: '45 mins',
@@ -1550,7 +1730,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '52',
     title: 'Marry Me Dip',
-    description: 'Irresistibly creamy and cheesy baked dip with sun-dried tomatoes - perfect for sharing!',
+    description: `Creamy, cheesy, and utterly irresistible — Marry Me Dip earns its name with every bite. This warm appetizer blends sun-dried tomatoes, cream cheese, garlic, and herbs into a rich, savory dip that's perfect for sharing (or not!).
+
+Whether you're hosting friends, setting up a cozy movie night, or just craving something indulgent, this dip delivers bold flavor and melty goodness that keeps everyone coming back for more.
+
+Serve it with warm bread, crackers, or fresh veggies — and get ready for compliments (and maybe a proposal).`,
     image: '/dip.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
@@ -1584,7 +1768,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '53',
     title: 'Baked Feta Chickpeas',
-    description: 'Mediterranean-style baked chickpeas with creamy feta and cherry tomatoes - healthy and delicious!',
+    description: `Simple, hearty, and bursting with Mediterranean flavor — Baked Feta Chickpeas is a dish that transforms humble ingredients into something truly special. Creamy feta melts into a garlicky tomato base, while tender chickpeas soak up every bit of that savory, herby goodness.
+
+It's perfect for a cozy dinner, quick lunch, or meal prep for the week. Serve it with warm pita, over rice, or enjoy as-is for a satisfying, protein-packed vegetarian meal.
+
+Comforting and effortlessly delicious — this one's a keeper.`,
     image: '/feta.jpg',
     category: 'Dinner',
     cookTime: '30 mins',
@@ -1617,7 +1805,11 @@ Whether you're fueling up for a busy day or enjoying a slow weekend morning, the
   {
     id: '54',
     title: 'Mediterranean White Beans & Greens',
-    description: 'Nutritious and flavorful white beans with leafy greens, olive oil, and Mediterranean herbs.',
+    description: `Fresh, nourishing, and full of rustic charm — Mediterranean White Beans & Greens is the kind of dish that feels both comforting and vibrant. Creamy cannellini beans simmer gently with garlic, olive oil, lemon, and leafy greens, soaking up all those bright, herbaceous flavors.
+
+It's a one-pan wonder you can enjoy on its own, pile onto toasted bread, or pair with grilled fish or chicken for a heartier meal.
+
+Simple ingredients, bold flavors — the Mediterranean way.`,
     image: '/beans.jpg',
     category: 'Dinner',
     cookTime: '15 mins',
