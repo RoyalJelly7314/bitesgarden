@@ -57,6 +57,13 @@ export const Header: React.FC<HeaderProps> = ({ selectedCategory, onCategorySele
         <nav className="hidden md:block relative" ref={dropdownRef}>
           <div className="flex items-center gap-3">
             <button
+              onClick={() => navigate('/about')}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 font-natural h-10 px-4 py-2"
+              style={{ backgroundColor: '#976139', color: 'white' }}
+            >
+              About
+            </button>
+            <button
               onClick={() => navigate('/blog')}
               className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 font-natural h-10 px-4 py-2"
               style={{ backgroundColor: '#976139', color: 'white' }}
@@ -118,6 +125,13 @@ export const Header: React.FC<HeaderProps> = ({ selectedCategory, onCategorySele
 
         {/* Mobile menu */}
         <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={() => navigate('/about')}
+            className="rounded-md px-3 py-2 text-sm font-natural focus:outline-none focus:ring-2 focus:ring-sage-500"
+            style={{ backgroundColor: '#976139', color: 'white' }}
+          >
+            About
+          </button>
           <button
             onClick={() => navigate('/blog')}
             className="rounded-md px-3 py-2 text-sm font-natural focus:outline-none focus:ring-2 focus:ring-sage-500"
