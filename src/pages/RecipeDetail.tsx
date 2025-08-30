@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { AdSpace } from '@/components/AdSpace';
 import { Clock, Users, ChefHat, ArrowLeft, Utensils, RefreshCw, Lightbulb, HelpCircle } from 'lucide-react';
-import type { Recipe } from '@/data/recipes';
 import { recipes } from '@/data/recipes';
 import { getRecipeMetadata, getRecipeUrlPath } from '@/lib/seo-utils';
 
