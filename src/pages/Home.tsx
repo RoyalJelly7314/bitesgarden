@@ -479,22 +479,7 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
         </section>
       )}
 
-      {/* Category Header */}
-      <section id="recipes-section" className="mb-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
-            {searchQuery ? `Search Results for "${searchQuery}"` : selectedCategory}
-          </h2>
-          <p className="text-muted-foreground font-natural text-lg">
-            {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
-            {displayedRecipes.length < filteredRecipes.length && (
-              <span className="text-sage-600 ml-2">
-                (showing {displayedRecipes.length})
-              </span>
-            )}
-          </p>
-        </div>
-      </section>
+      {/* Category Header - Removed to eliminate "All Recipes" heading above What's New */}
 
       {/* What's New Section - Show 4 latest recipes - ONLY on home page */}
       {!searchQuery && selectedCategory === 'All Recipes' && (
@@ -523,7 +508,8 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
           <div className="text-center mt-12">
             <Button
               onClick={() => {
-                const recipesSection = document.getElementById('recipes-section');
+                // Scroll to the recipes section below
+                const recipesSection = document.querySelector('[data-recipes-section]');
                 recipesSection?.scrollIntoView({ behavior: 'smooth' });
               }}
               variant="outline"
@@ -537,15 +523,25 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
 
       {/* Category Recipes Section - Display filtered recipes by category */}
       {!searchQuery && (
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
-              {selectedCategory === 'All Recipes' ? 'All Recipes' : `${selectedCategory} Recipes`}
-            </h2>
-            <p className="text-lg text-muted-foreground font-natural">
-              {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
-            </p>
-          </div>
+        <section className="mb-16" data-recipes-section>
+          {selectedCategory !== 'All Recipes' && (
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4 section-heading">
+                {selectedCategory} Recipes
+              </h2>
+              <p className="text-lg text-muted-foreground font-natural">
+                {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
+              </p>
+            </div>
+          )}
+          
+          {selectedCategory === 'All Recipes' && (
+            <div className="text-center mb-12">
+              <p className="text-lg text-muted-foreground font-natural">
+                {filteredRecipes.length} recipe{filteredRecipes.length !== 1 ? 's' : ''} found
+              </p>
+            </div>
+          )}
 
           {/* Filtered Recipes Grid */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

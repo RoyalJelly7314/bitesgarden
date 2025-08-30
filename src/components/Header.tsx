@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({ selectedCategory, onCategorySele
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:block relative" ref={dropdownRef}>
+        <nav className="hidden md:block">
           <div className="flex items-center gap-3">
             <button
               onClick={() => navigate('/about')}
@@ -77,50 +77,52 @@ export const Header: React.FC<HeaderProps> = ({ selectedCategory, onCategorySele
             >
               Printables
             </button>
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 font-natural h-10 px-4 py-2 gap-1"
-              style={{ backgroundColor: '#976139', color: 'white' }}
-            >
-              Categories
-              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
-          </div>
-          
-          {isDropdownOpen && (
-            <div className="absolute top-full left-0 mt-1 w-64 rounded-md border bg-popover shadow-lg z-50">
-              <div className="grid gap-1 p-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    className={`block w-full text-left select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-sage-100 hover:text-sage-800 focus:bg-sage-100 focus:text-sage-800 cursor-pointer font-natural ${
-                      selectedCategory === category ? 'bg-sage-100 text-sage-800' : ''
-                    }`}
-                    onClick={() => {
-                      // Save scroll position before changing category (if we're on the home page)
-                      if (window.location.pathname === '/') {
-                        const scrollKey = `home-${selectedCategory}`;
-                        saveCurrentScrollPosition(scrollKey);
-                      }
-                      onCategorySelect(category);
-                      setIsDropdownOpen(false);
-                      // Navigate to home page if we're not already there
-                      if (window.location.pathname !== '/') {
-                        navigate('/');
-                      } else {
-                        // If we're already on home, scroll to top when changing categories
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    <div className="text-sm font-medium leading-none">
-                      {category}
-                    </div>
-                  </button>
-                ))}
-              </div>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 font-natural h-10 px-4 py-2 gap-1"
+                style={{ backgroundColor: '#976139', color: 'white' }}
+              >
+                Categories
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isDropdownOpen && (
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-64 rounded-md border bg-popover shadow-lg z-50">
+                  <div className="grid gap-1 p-2">
+                    {categories.map((category) => (
+                      <button
+                        key={category}
+                        className={`block w-full text-left select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-sage-100 hover:text-sage-800 focus:bg-sage-100 focus:text-sage-800 cursor-pointer font-natural ${
+                          selectedCategory === category ? 'bg-sage-100 text-sage-800' : ''
+                        }`}
+                        onClick={() => {
+                          // Save scroll position before changing category (if we're on the home page)
+                          if (window.location.pathname === '/') {
+                            const scrollKey = `home-${selectedCategory}`;
+                            saveCurrentScrollPosition(scrollKey);
+                          }
+                          onCategorySelect(category);
+                          setIsDropdownOpen(false);
+                          // Navigate to home page if we're not already there
+                          if (window.location.pathname !== '/') {
+                            navigate('/');
+                          } else {
+                            // If we're already on home, scroll to top when changing categories
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }
+                        }}
+                      >
+                        <div className="text-sm font-medium leading-none">
+                          {category}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </nav>
 
         {/* Mobile menu */}

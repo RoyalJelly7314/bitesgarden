@@ -2,7 +2,7 @@ import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
 import { Badge } from './ui/badge';
 import { Separator } from './ui/separator';
-import { Clock, Users, ChefHat } from 'lucide-react';
+import { Clock, Users, ChefHat, Utensils, RefreshCw, Lightbulb, HelpCircle } from 'lucide-react';
 import type { Recipe } from '@/data/recipes';
 
 interface RecipeModalProps {
@@ -116,17 +116,107 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, isOpen, onClos
               </h3>
               <ol className="space-y-3">
                 {recipe.instructions.map((instruction, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-sage-100 text-sage-800 text-xs font-semibold rounded-full mr-3 mt-0.5 flex-shrink-0 font-natural">
-                      {index + 1}
-                    </span>
-                    <span className="text-sm font-natural leading-relaxed">
-                      {instruction}
-                    </span>
+                  <li key={index} className="space-y-2">
+                    <div className="flex items-start">
+                      <span className="inline-flex items-center justify-center w-6 h-6 bg-sage-100 text-sage-800 text-xs font-semibold rounded-full mr-3 mt-0.5 flex-shrink-0 font-natural">
+                        {index + 1}
+                      </span>
+                      <span className="text-sm font-natural leading-relaxed">
+                        {instruction}
+                      </span>
+                    </div>
                   </li>
                 ))}
               </ol>
             </div>
+
+            {/* Serving Suggestions */}
+            {recipe.servingSuggestions && recipe.servingSuggestions.length > 0 && (
+              <>
+                <Separator />
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-sage-800 font-handwritten flex items-center gap-2">
+                    <Utensils className="h-5 w-5 text-sage-600" />
+                    Serving Suggestions
+                  </h3>
+                  <ul className="space-y-2">
+                    {recipe.servingSuggestions.map((suggestion, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="inline-block w-2 h-2 bg-sage-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="text-sm font-natural">{suggestion}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )}
+
+            {/* Variations & Substitutions */}
+            {recipe.variations && recipe.variations.length > 0 && (
+              <>
+                <Separator />
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-sage-800 font-handwritten flex items-center gap-2">
+                    <RefreshCw className="h-5 w-5 text-sage-600" />
+                    Variations & Substitutions
+                  </h3>
+                  <ul className="space-y-2">
+                    {recipe.variations.map((variation, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="inline-block w-2 h-2 bg-sage-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="text-sm font-natural">{variation}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )}
+
+            {/* Tips & Tricks */}
+            {recipe.tips && recipe.tips.length > 0 && (
+              <>
+                <Separator />
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-sage-800 font-handwritten flex items-center gap-2">
+                    <Lightbulb className="h-5 w-5 text-sage-600" />
+                    Tips & Tricks
+                  </h3>
+                  <ul className="space-y-2">
+                    {recipe.tips.map((tip, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="inline-block w-2 h-2 bg-sage-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="text-sm font-natural">{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )}
+
+            {/* FAQ */}
+            {recipe.faq && recipe.faq.length > 0 && (
+              <>
+                <Separator />
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 text-sage-800 font-handwritten flex items-center gap-2">
+                    <HelpCircle className="h-5 w-5 text-sage-600" />
+                    Frequently Asked Questions
+                  </h3>
+                  <div className="space-y-3">
+                    {recipe.faq.map((item, index) => (
+                      <div key={index} className="space-y-1">
+                        <div className="font-semibold text-sm text-sage-800 font-natural">
+                          Q: {item.question}
+                        </div>
+                        <div className="text-sm text-muted-foreground font-natural ml-4">
+                          A: {item.answer}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </DialogContent>

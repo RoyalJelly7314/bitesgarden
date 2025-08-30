@@ -1,11 +1,12 @@
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import { recipes } from '@/data/recipes';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { Clock, Users, ChefHat, ArrowLeft } from 'lucide-react';
 import { AdSpace } from '@/components/AdSpace';
+import { Clock, Users, ChefHat, ArrowLeft, Utensils, RefreshCw, Lightbulb, HelpCircle } from 'lucide-react';
+import type { Recipe } from '@/data/recipes';
+import { recipes } from '@/data/recipes';
 import { getRecipeMetadata, getRecipeUrlPath } from '@/lib/seo-utils';
 
 export const RecipeDetail = () => {
@@ -263,6 +264,94 @@ export const RecipeDetail = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* Serving Suggestions */}
+                {recipe.servingSuggestions && recipe.servingSuggestions.length > 0 && (
+                  <>
+                    <Separator />
+                    <div className="recipe-card p-6 rounded-lg">
+                      <h2 className="text-2xl font-semibold mb-6 text-sage-800 section-heading flex items-center gap-3">
+                        <Utensils className="h-6 w-6 text-sage-600" />
+                        Serving Suggestions
+                      </h2>
+                      <div className="space-y-3">
+                        {recipe.servingSuggestions.map((suggestion, index) => (
+                          <div key={index} className="flex items-start gap-3">
+                            <span className="inline-block w-3 h-3 bg-sage-400 rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-base font-natural leading-relaxed">{suggestion}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Variations & Substitutions */}
+                {recipe.variations && recipe.variations.length > 0 && (
+                  <>
+                    <Separator />
+                    <div className="recipe-card p-6 rounded-lg">
+                      <h2 className="text-2xl font-semibold mb-6 text-sage-800 section-heading flex items-center gap-3">
+                        <RefreshCw className="h-6 w-6 text-sage-600" />
+                        Variations & Substitutions
+                      </h2>
+                      <div className="space-y-3">
+                        {recipe.variations.map((variation, index) => (
+                          <div key={index} className="flex items-start gap-3">
+                            <span className="inline-block w-3 h-3 bg-sage-400 rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-base font-natural leading-relaxed">{variation}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Tips & Tricks */}
+                {recipe.tips && recipe.tips.length > 0 && (
+                  <>
+                    <Separator />
+                    <div className="recipe-card p-6 rounded-lg">
+                      <h2 className="text-2xl font-semibold mb-6 text-sage-800 section-heading flex items-center gap-3">
+                        <Lightbulb className="h-6 w-6 text-sage-600" />
+                        Tips & Tricks
+                      </h2>
+                      <div className="space-y-3">
+                        {recipe.tips.map((tip, index) => (
+                          <div key={index} className="flex items-start gap-3">
+                            <span className="inline-block w-3 h-3 bg-sage-400 rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-base font-natural leading-relaxed">{tip}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* FAQ */}
+                {recipe.faq && recipe.faq.length > 0 && (
+                  <>
+                    <Separator />
+                    <div className="recipe-card p-6 rounded-lg">
+                      <h2 className="text-2xl font-semibold mb-6 text-sage-800 section-heading flex items-center gap-3">
+                        <HelpCircle className="h-6 w-6 text-sage-600" />
+                        Frequently Asked Questions
+                      </h2>
+                      <div className="space-y-4">
+                        {recipe.faq.map((item, index) => (
+                          <div key={index} className="space-y-2">
+                            <div className="font-semibold text-base text-sage-800 font-natural">
+                              Q: {item.question}
+                            </div>
+                            <div className="text-base text-muted-foreground font-natural ml-4">
+                              A: {item.answer}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

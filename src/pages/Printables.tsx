@@ -127,6 +127,129 @@ export const Printables: React.FC = () => {
         yPosition += instructionLines.length * 5 + 8;
       });
 
+      yPosition += 10;
+
+      // Serving Suggestions section
+      if (recipe.servingSuggestions && recipe.servingSuggestions.length > 0) {
+        checkNewPage(30);
+        pdf.setFontSize(16);
+        pdf.setTextColor(90, 138, 73);
+        pdf.text('Serving Suggestions', margin, yPosition);
+        yPosition += 10;
+
+        pdf.setFillColor(250, 248, 245);
+        const servingHeight = recipe.servingSuggestions.length * 6 + 10;
+        pdf.rect(margin, yPosition, contentWidth, servingHeight, 'F');
+
+        pdf.setFontSize(10);
+        pdf.setTextColor(51, 51, 51);
+        yPosition += 8;
+
+        recipe.servingSuggestions.forEach((suggestion) => {
+          checkNewPage(8);
+          pdf.circle(margin + 5, yPosition - 1, 1, 'F');
+          pdf.text(suggestion, margin + 12, yPosition);
+          yPosition += 6;
+        });
+
+        yPosition += 10;
+      }
+
+      // Variations & Substitutions section
+      if (recipe.variations && recipe.variations.length > 0) {
+        checkNewPage(30);
+        pdf.setFontSize(16);
+        pdf.setTextColor(90, 138, 73);
+        pdf.text('Variations & Substitutions', margin, yPosition);
+        yPosition += 10;
+
+        pdf.setFillColor(250, 248, 245);
+        const variationsHeight = recipe.variations.length * 6 + 10;
+        pdf.rect(margin, yPosition, contentWidth, variationsHeight, 'F');
+
+        pdf.setFontSize(10);
+        pdf.setTextColor(51, 51, 51);
+        yPosition += 8;
+
+        recipe.variations.forEach((variation) => {
+          checkNewPage(8);
+          pdf.circle(margin + 5, yPosition - 1, 1, 'F');
+          pdf.text(variation, margin + 12, yPosition);
+          yPosition += 6;
+        });
+
+        yPosition += 10;
+      }
+
+      // Tips & Tricks section
+      if (recipe.tips && recipe.tips.length > 0) {
+        checkNewPage(30);
+        pdf.setFontSize(16);
+        pdf.setTextColor(90, 138, 73);
+        pdf.text('Tips & Tricks', margin, yPosition);
+        yPosition += 10;
+
+        pdf.setFillColor(250, 248, 245);
+        const tipsHeight = recipe.tips.length * 6 + 10;
+        pdf.rect(margin, yPosition, contentWidth, tipsHeight, 'F');
+
+        pdf.setFontSize(10);
+        pdf.setTextColor(51, 51, 51);
+        yPosition += 8;
+
+        recipe.tips.forEach((tip) => {
+          checkNewPage(8);
+          pdf.circle(margin + 5, yPosition - 1, 1, 'F');
+          pdf.text(tip, margin + 12, yPosition);
+          yPosition += 6;
+        });
+
+        yPosition += 10;
+      }
+
+      // FAQ section
+      if (recipe.faq && recipe.faq.length > 0) {
+        checkNewPage(30);
+        pdf.setFontSize(16);
+        pdf.setTextColor(90, 138, 73);
+        pdf.text('Frequently Asked Questions', margin, yPosition);
+        yPosition += 10;
+
+        pdf.setFillColor(250, 248, 245);
+        let faqHeight = 0;
+        recipe.faq.forEach((item) => {
+          const questionLines = pdf.splitTextToSize(item.question, contentWidth - 20);
+          const answerLines = pdf.splitTextToSize(item.answer, contentWidth - 20);
+          faqHeight += (questionLines.length + answerLines.length) * 5 + 8;
+        });
+        faqHeight += 10;
+        pdf.rect(margin, yPosition, contentWidth, faqHeight, 'F');
+
+        pdf.setFontSize(10);
+        pdf.setTextColor(51, 51, 51);
+        yPosition += 8;
+
+        recipe.faq.forEach((item) => {
+          checkNewPage(15);
+          
+          // Question
+          pdf.setFontSize(10);
+          pdf.setTextColor(90, 138, 73);
+          const questionLines = pdf.splitTextToSize(`Q: ${item.question}`, contentWidth - 20);
+          pdf.text(questionLines, margin + 12, yPosition);
+          yPosition += questionLines.length * 5 + 3;
+          
+          // Answer
+          pdf.setFontSize(10);
+          pdf.setTextColor(51, 51, 51);
+          const answerLines = pdf.splitTextToSize(`A: ${item.answer}`, contentWidth - 20);
+          pdf.text(answerLines, margin + 12, yPosition);
+          yPosition += answerLines.length * 5 + 5;
+        });
+
+        yPosition += 10;
+      }
+
       // Tags
       if (recipe.tags.length > 0) {
         checkNewPage(20);
