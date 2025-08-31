@@ -4,7 +4,6 @@ import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { AdSpace } from '@/components/AdSpace';
 
 // Sample blog posts data
 const blogPosts = [
@@ -261,18 +260,7 @@ export const Blog: React.FC = () => {
           {/* Sidebar Ads - Desktop Only */}
           <aside className="hidden xl:block w-80 flex-shrink-0">
             <div className="sticky top-24 space-y-8">
-              <AdSpace 
-                size="sidebar" 
-                placement="Blog Sidebar Top"
-              />
-              <AdSpace 
-                size="sidebar" 
-                placement="Blog Sidebar Middle"
-              />
-              <AdSpace 
-                size="square" 
-                placement="Blog Sidebar Bottom"
-              />
+              {/* Removed AdSpace components */}
             </div>
           </aside>
         </div>

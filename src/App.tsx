@@ -7,8 +7,6 @@ import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
 import { Printables } from './pages/Printables';
 import { About } from './pages/About';
-import { AdSpace } from './components/AdSpace';
-import { MobileStickyAd } from './components/MobileStickyAd';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('All Recipes');
@@ -20,22 +18,6 @@ function App() {
         selectedCategory={selectedCategory}
         onCategorySelect={setSelectedCategory}
       />
-
-      {/* Header Banner Ad */}
-      <div className="w-full bg-white border-b border-sage-100">
-        <div className="container mx-auto px-4 py-3 flex justify-center">
-          <AdSpace 
-            size="leaderboard" 
-            placement="Header Banner"
-            className="hidden sm:block"
-          />
-          <AdSpace 
-            size="native" 
-            placement="Header Banner Mobile"
-            className="block sm:hidden"
-          />
-        </div>
-      </div>
 
       {/* Routes */}
       <Routes>
@@ -68,9 +50,6 @@ function App() {
           element={<About />} 
         />
       </Routes>
-
-      {/* Mobile Sticky Ad */}
-      <MobileStickyAd />
     </div>
   );
 }

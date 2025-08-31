@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { AdSpace } from '@/components/AdSpace';
 import { Clock, Users, ChefHat, ArrowLeft, Utensils, RefreshCw, Lightbulb, HelpCircle } from 'lucide-react';
 import { recipes } from '@/data/recipes';
 import { getRecipeMetadata, getRecipeUrlPath } from '@/lib/seo-utils';
@@ -224,14 +223,6 @@ export const RecipeDetail = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-center">
-                  <AdSpace 
-                    size="native" 
-                    placement="After Ingredients"
-                    className="w-full max-w-2xl"
-                  />
-                </div>
-
                 <Separator />
 
                 <div className="recipe-card p-6 rounded-lg">
@@ -249,16 +240,6 @@ export const RecipeDetail = () => {
                             {instruction}
                           </p>
                         </div>
-
-                        {index === 1 && (
-                          <div className="my-8 flex justify-center">
-                            <AdSpace 
-                              size="native" 
-                              placement="Between Instructions 2-3"
-                              className="w-full max-w-2xl"
-                            />
-                          </div>
-                        )}
                       </div>
                     ))}
                   </div>
@@ -357,19 +338,13 @@ export const RecipeDetail = () => {
 
           <aside className="hidden xl:block w-80 flex-shrink-0">
             <div className="sticky top-24 space-y-8">
-              <AdSpace size="sidebar" placement="Recipe Sidebar Top" />
-              <AdSpace size="sidebar" placement="Recipe Sidebar Middle" />
-              <AdSpace size="square" placement="Recipe Sidebar Bottom" />
+              {/* Removed AdSpace components */}
             </div>
           </aside>
         </div>
 
         <div className="mt-12 mb-8 flex justify-center">
-          <AdSpace 
-            size="banner" 
-            placement="Bottom of Recipe"
-            className="w-full max-w-4xl"
-          />
+          {/* Removed AdSpace component */}
         </div>
 
         <div className="mt-8 flex justify-center">

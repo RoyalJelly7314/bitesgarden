@@ -1,7 +1,6 @@
 import { useMemo, useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RecipeCard } from '@/components/RecipeCard';
-import { AdSpace } from '@/components/AdSpace';
 import { PrivacyPolicyModal } from '@/components/PrivacyPolicyModal';
 import { recipes } from '@/data/recipes';
 import { Button } from '@/components/ui/button';
@@ -589,15 +588,6 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
       {/* Search Results */}
       {searchQuery && (
         <div className="space-y-8">
-          {/* First ad banner before search results */}
-          <div className="flex justify-center mb-8">
-            <AdSpace 
-              size="leaderboard" 
-              placement="Pre-Search Results Banner" 
-              className="mx-auto"
-            />
-          </div>
-
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {displayedRecipes.map((recipe) => (
               <RecipeCard
@@ -635,27 +625,6 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
               <p className="text-sage-600 font-natural text-lg">
                 🍴 You've seen all the search results! 🍴
               </p>
-              <div className="mt-6 space-y-6">
-                <div className="flex justify-center">
-                  <AdSpace 
-                    size="banner" 
-                    placement="End of Search Results Banner" 
-                    className="mx-auto"
-                  />
-                </div>
-                
-                {/* Final ad grid */}
-                <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-                  <AdSpace 
-                    size="sidebar" 
-                    placement="Bottom Sidebar Ad 1" 
-                  />
-                  <AdSpace 
-                    size="sidebar" 
-                    placement="Bottom Sidebar Ad 2" 
-                  />
-                </div>
-              </div>
             </div>
           )}
         </div>
@@ -682,14 +651,6 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
             >
               Clear Search
             </Button>
-          </div>
-          
-          {/* Ad for empty state */}
-          <div className="mt-8 flex justify-center">
-            <AdSpace 
-              size="sidebar" 
-              placement="No Results Ad" 
-            />
           </div>
         </div>
       )}

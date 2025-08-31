@@ -3,7 +3,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { AdSpace } from '@/components/AdSpace';
 
 // Sample blog posts data (in a real app, this would come from an API or database)
 const blogPosts = [
@@ -298,17 +297,6 @@ export const BlogPost: React.FC = () => {
                   
                   return (
                     <div key={index}>
-                      {/* Native In-Content Ad after first paragraph */}
-                      {index === 1 && (
-                        <div className="my-8 flex justify-center">
-                          <AdSpace 
-                            size="native" 
-                            placement="Blog In-Content"
-                            className="w-full max-w-2xl"
-                          />
-                        </div>
-                      )}
-                      
                       {isHeader ? (
                         <h3 className="text-xl font-semibold text-sage-800 mt-6 mb-3 section-heading">
                           {paragraph.replace(/\*\*/g, '')}
@@ -327,15 +315,6 @@ export const BlogPost: React.FC = () => {
                   );
                 })}
               </div>
-            </div>
-
-            {/* Bottom of Post Ad */}
-            <div className="mt-8 mb-8 flex justify-center">
-              <AdSpace 
-                size="banner" 
-                placement="Bottom of Blog Post"
-                className="w-full max-w-4xl"
-              />
             </div>
 
             {/* Related Posts Navigation */}
@@ -364,18 +343,7 @@ export const BlogPost: React.FC = () => {
           {/* Sidebar Ads - Desktop Only */}
           <aside className="hidden xl:block w-80 flex-shrink-0">
             <div className="sticky top-24 space-y-8">
-              <AdSpace 
-                size="sidebar" 
-                placement="Blog Post Sidebar Top"
-              />
-              <AdSpace 
-                size="sidebar" 
-                placement="Blog Post Sidebar Middle"
-              />
-              <AdSpace 
-                size="square" 
-                placement="Blog Post Sidebar Bottom"
-              />
+              {/* Removed AdSpace components */}
             </div>
           </aside>
         </div>
