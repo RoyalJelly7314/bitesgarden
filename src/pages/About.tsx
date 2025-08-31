@@ -100,16 +100,16 @@ export const About: React.FC = () => {
               <p className="text-lg text-sage-700 leading-relaxed mb-4">
                 I'm so glad you're here. Feel free to explore the recipes, try something new, and make Bites Garden part of your kitchen. Got a question, idea, or just want to say hi? You can contact me here or email me at{' '}
                 <a 
-                  href="mailto:bitesgarden@gmail.com" 
+                  href="mailto:bitesgarden.info@proton.me" 
                   className="text-sage-600 hover:text-sage-800 underline transition-colors"
                 >
-                  bitesgarden@gmail.com
+                  bitesgarden.info@proton.me
                 </a>.
               </p>
               <p className="text-lg text-sage-700 leading-relaxed mb-4">
                 You can also follow along on{' '}
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/bitesgarden/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sage-600 hover:text-sage-800 underline transition-colors"
