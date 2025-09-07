@@ -12,6 +12,7 @@ export const RecipeDetail = () => {
   const navigate = useNavigate();
 
   const recipe = recipes.find(r => r.id === id);
+  const metadata = recipe ? getRecipeMetadata(recipe) : null;
 
   const navigateBackToHome = () => {
     navigate('/');
@@ -22,8 +23,7 @@ export const RecipeDetail = () => {
   }, [id]);
 
   useEffect(() => {
-    if (recipe) {
-      const metadata = getRecipeMetadata(recipe);
+    if (recipe && metadata) {
       document.title = metadata.title;
 
       // Meta description
@@ -43,6 +43,63 @@ export const RecipeDetail = () => {
         document.head.appendChild(metaKeywords);
       }
       metaKeywords.setAttribute('content', metadata.keywords);
+
+      // Open Graph meta tags
+      const ogTags = [
+        { property: 'og:title', content: metadata.title },
+        { property: 'og:description', content: metadata.description },
+        { property: 'og:image', content: recipe.image.startsWith('/') ? `${window.location.origin}${recipe.image}` : recipe.image },
+        { property: 'og:url', content: `${window.location.origin}${metadata.canonical}` },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:site_name', content: 'BitesGarden' }
+      ];
+
+      ogTags.forEach(tag => {
+        let metaTag = document.querySelector(`meta[property="${tag.property}"]`) as HTMLMetaElement | null;
+        if (!metaTag) {
+          metaTag = document.createElement('meta');
+          metaTag.setAttribute('property', tag.property);
+          document.head.appendChild(metaTag);
+        }
+        metaTag.setAttribute('content', tag.content);
+      });
+
+      // Twitter Card meta tags
+      const twitterTags = [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: metadata.title },
+        { name: 'twitter:description', content: metadata.description },
+        { name: 'twitter:image', content: recipe.image.startsWith('/') ? `${window.location.origin}${recipe.image}` : recipe.image }
+      ];
+
+      twitterTags.forEach(tag => {
+        let metaTag = document.querySelector(`meta[name="${tag.name}"]`) as HTMLMetaElement | null;
+        if (!metaTag) {
+          metaTag = document.createElement('meta');
+          metaTag.setAttribute('name', tag.name);
+          document.head.appendChild(metaTag);
+        }
+        metaTag.setAttribute('content', tag.content);
+      });
+
+      // Additional SEO meta tags
+      const additionalTags = [
+        { name: 'robots', content: 'index, follow' },
+        { name: 'author', content: 'BitesGarden' },
+        { name: 'article:author', content: 'BitesGarden' },
+        { name: 'article:section', content: recipe.category },
+        { name: 'article:tag', content: recipe.tags.join(', ') }
+      ];
+
+      additionalTags.forEach(tag => {
+        let metaTag = document.querySelector(`meta[name="${tag.name}"]`) as HTMLMetaElement | null;
+        if (!metaTag) {
+          metaTag = document.createElement('meta');
+          metaTag.setAttribute('name', tag.name);
+          document.head.appendChild(metaTag);
+        }
+        metaTag.setAttribute('content', tag.content);
+      });
 
       if (!slug && recipe) {
         const seoUrl = getRecipeUrlPath(recipe.id, recipe.title);
@@ -96,7 +153,7 @@ export const RecipeDetail = () => {
     return () => {
       document.title = 'Bites Garden - Where Every Bite Blooms';
     };
-  }, [recipe, slug, navigate]);
+  }, [recipe, slug, navigate, metadata]);
 
   if (!recipe) {
     return (
@@ -173,7 +230,7 @@ export const RecipeDetail = () => {
                 <div className="relative h-80 rounded-lg overflow-hidden">
                   <img
                     src={recipe.image}
-                    alt={recipe.title}
+                    alt={metadata?.altText || recipe.title}
                     className="w-full h-full object-cover"
                   />
                 </div>

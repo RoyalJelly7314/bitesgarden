@@ -37,7 +37,7 @@ export const recipes: Recipe[] = [
 The result? A tender, flaky fish with a golden, caramelized finish and a burst of fresh flavor in every bite.
 
 Serve it alongside roasted veggies, rice, or a light salad for a balanced, beautiful meal that feels like something special — without the fuss.`,
-    image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=80',
+    image: '/Honey-Glazed-Salmon.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
     prepTime: '10 mins',
@@ -113,7 +113,7 @@ Serve it alongside roasted veggies, rice, or a light salad for a balanced, beaut
     description: `Golden, crisp, and delicately spiced — this Rustic Apple Cinnamon Tart is everything cozy baked into one beautiful dessert. With tender apple slices nestled in a flaky, free-form crust and sprinkled with cinnamon sugar, it's a simple yet impressive treat that tastes like home.
 
 No fancy techniques, just real ingredients and warm flavors that shine. Perfect for autumn evenings, weekend baking, or anytime you crave something sweet and nostalgic.`,
-    image: '/appletart.jpg',
+    image: '/Rustic-Apple-Cinnamon-Tart.jpg',
     category: 'Desserts',
     cookTime: '40 mins',
     prepTime: '45 mins',
@@ -198,7 +198,7 @@ No fancy techniques, just real ingredients and warm flavors that shine. Perfect 
     description: `Start your day with a burst of color, flavor, and nourishment with this Morning Garden Scramble. Inspired by the freshness of a backyard garden, this wholesome breakfast combines fluffy scrambled eggs with a medley of seasonal vegetables like bell peppers, spinach, cherry tomatoes, and onions. It's a simple yet vibrant dish that comes together in minutes and delivers a balanced mix of protein, fiber, and natural sweetness.
 
 Whether you're fueling up for a busy day or enjoying a slow weekend morning, the Morning Garden Scramble is endlessly customizable and pairs perfectly with toast, avocado, or fresh herbs from your kitchen window. It's a great way to reduce food waste too—just toss in whatever veggies you have on hand. Healthy, satisfying, and full of garden goodness, this is a breakfast that blooms on your plate.`,
-    image: '/eggs.jpg',
+    image: '/Morning-Garden-Scramble.jpg',
     category: 'Breakfast',
     cookTime: '10 mins',
     prepTime: '5 mins',
@@ -271,7 +271,7 @@ Whether it's a cozy weekend brunch or a weekday treat, this recipe delivers perf
 A splash of vanilla and a touch of sweetness give them that classic, homemade flavor, while a drizzle of maple syrup or a handful of fresh berries takes them to the next level. They're quick to make, endlessly customizable, and sure to become a staple in your kitchen.
 
 Fluffy, comforting, and delicious — this is pancake perfection.`,
-    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80',
+    image: '/Fluffy-Pancakes.jpg',
     category: 'Breakfast',
     cookTime: '15 mins',
     prepTime: '10 mins',
@@ -349,7 +349,7 @@ Fluffy, comforting, and delicious — this is pancake perfection.`,
 Thick slices of bread are soaked in a rich cinnamon-vanilla egg mixture, then pan-fried to perfection for that beautiful golden-brown finish. Whether you're using fresh or slightly stale bread, this recipe is forgiving and full of flavor. Topped with a dusting of powdered sugar, a drizzle of maple syrup, or a handful of fresh fruit, it's a meal that feels like a warm hug on a plate.
 
 Perfect for slow weekend mornings, brunch with friends, or even breakfast-for-dinner, Cinnamon French Toast is a timeless favorite that never goes out of style.`,
-    image: '/cinamon.jpg',
+    image: '/Cinnamon-French-Toast.jpg',
     category: 'Breakfast',
     cookTime: '10 mins',
     prepTime: '10 mins',
@@ -424,7 +424,7 @@ Perfect for slow weekend mornings, brunch with friends, or even breakfast-for-di
 This dish strikes a beautiful balance of healthy fats, protein, and fiber, keeping you full and energized for hours. A sprinkle of sea salt, a dash of chili flakes, or a squeeze of lemon adds just the right kick, while optional toppings like microgreens, feta, or hot sauce let you make it your own.
 
 Minimal effort, maximum flavor — this recipe is a modern classic that proves healthy can also be delicious. It's no surprise avocado toast has become a kitchen staple around the world.`,
-    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500&q=80',
+    image: '/Avocado-Toast-with-Egg.jpg',
     category: 'Breakfast',
     cookTime: '5 mins',
     prepTime: '5 mins',
@@ -497,7 +497,7 @@ Minimal effort, maximum flavor — this recipe is a modern classic that proves h
 Wrapped in a soft tortilla and easy to take on the go, it's perfect for busy mornings, weekend brunches, or even meal prep for the week ahead. Add some avocado, salsa, or hot sauce for an extra flavor boost, or customize it with your favorite fillings to make it just right.
 
 Comforting, filling, and easy to make, the Breakfast Burrito is a crowd-pleaser that delivers every time — whether you're feeding a family or just yourself.`,
-    image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=500&q=80',
+    image: '/Breakfast-Burrito.jpg',
     category: 'Breakfast',
     cookTime: '10 mins',
     prepTime: '10 mins',
@@ -575,7 +575,7 @@ Comforting, filling, and easy to make, the Breakfast Burrito is a crowd-pleaser 
 Customizable with your favorite add-ins like fresh fruit, nuts, seeds, or a swirl of peanut butter, overnight oats are both nourishing and endlessly adaptable. They're a great source of fiber, energy, and satisfaction, making them ideal for busy mornings or meal prep throughout the week.
 
 Whether you prefer them fruity, chocolatey, or nutty, Overnight Oats offer a deliciously wholesome start to your day — with barely any effort at all.`,
-    image: '/oats.jpeg',
+    image: '/Overnight-Oats.jpeg',
     category: 'Breakfast',
     cookTime: '0 mins',
     prepTime: '5 mins',
@@ -651,7 +651,7 @@ Whether you prefer them fruity, chocolatey, or nutty, Overnight Oats offer a del
 Blended with frozen fruits and a splash of milk or yogurt, each bowl becomes a blank canvas for toppings like granola, chia seeds, fresh berries, coconut flakes, or a drizzle of nut butter. It's as pretty as it is powerful — loaded with vitamins, antioxidants, and fiber to keep you full and glowing all morning.
 
 Perfect for warm weather mornings, healthy habits, or just treating yourself to something colorful and delicious, the Smoothie Bowl is a feel-good favorite that never gets boring.`,
-    image: '/smutibowl.jpg',
+    image: '/Smoothie-Bowl.jpg',
     category: 'Breakfast',
     cookTime: '0 mins',
     prepTime: '10 mins',
@@ -725,7 +725,7 @@ Perfect for warm weather mornings, healthy habits, or just treating yourself to 
 It's protein-rich, naturally sweetened, and endlessly customizable. Whether you're making it in a jar for a grab-and-go option or serving it in a glass for a pretty brunch, this parfait is as versatile as it is delicious.
 
 Healthy, satisfying, and ready in minutes, a Greek Yogurt Parfait is proof that wholesome food can be both beautiful and effortless.`,
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&q=80',
+    image: '/Greek-Yogurt-Parfait.jpg',
     category: 'Breakfast',
     cookTime: '0 mins',
     prepTime: '5 mins',
@@ -800,7 +800,7 @@ Healthy, satisfying, and ready in minutes, a Greek Yogurt Parfait is proof that 
 Mild in flavor and endlessly customizable, chia pudding is a perfect base for layering with fruits, nuts, nut butters, or even a bit of chocolate. Whether you enjoy it plain and simple or dressed up with toppings, it's a wholesome option that feels indulgent without the guilt.
 
 Great for busy mornings, meal prep, or a light dessert, this little jar of goodness is proof that simple ingredients can do magical things.`,
-    image: '/chia.jpg',
+    image: '/Chia-Pudding.jpg',
     category: 'Breakfast',
     cookTime: '0 mins',
     prepTime: '5 mins',
@@ -874,7 +874,7 @@ Great for busy mornings, meal prep, or a light dessert, this little jar of goodn
 Whether you go savory with smoked salmon and capers, or sweet with fresh berries and honey, bagels offer a balance of comfort and creativity. They're ideal for leisurely brunches, quick weekday mornings, or assembling a beautiful bagel board for guests.
 
 Customizable, filling, and always a crowd-pleaser, this is a breakfast classic that never goes out of style.`,
-    image: '/bagels.jpg',
+    image: '/Bagels-with-Cream-Cheese-&-Toppings.jpg',
     category: 'Breakfast',
     cookTime: '5 mins',
     prepTime: '5 mins',
@@ -947,7 +947,7 @@ Customizable, filling, and always a crowd-pleaser, this is a breakfast classic t
 Perfect for using up overripe bananas, this loaf bakes up golden and fragrant, ready to be sliced for breakfast, an afternoon snack, or even dessert. It's easy to make, forgiving to tweak, and always satisfying with a cup of coffee or tea.
 
 Whether you bake it for loved ones or just for yourself, Banana Bread is more than just a recipe — it's a hug in every slice.`,
-    image: '/banana.jpg',
+    image: '/Banana-Bread.jpg',
     category: 'Breakfast',
     cookTime: '55 mins',
     prepTime: '10 mins',
@@ -1028,7 +1028,7 @@ Whether you bake it for loved ones or just for yourself, Banana Bread is more th
 The pasta is coated in a silky garlic butter sauce, finished with a generous shower of grated Parmesan for that perfect salty-savory finish. It's a go-to recipe for busy nights, last-minute dinners, or whenever you're craving something cozy and satisfying without the fuss.
 
 Simple, flavorful, and endlessly comforting — this is pasta at its best.`,
-    image: '/garlicpasta.jpg',
+    image: '/Garlic-Butter-Pasta-with-Parmesan.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
     prepTime: '5 mins',
@@ -1104,7 +1104,7 @@ Simple, flavorful, and endlessly comforting — this is pasta at its best.`,
 This recipe strikes the perfect balance — the honey adds a touch of sweetness, the garlic brings depth and warmth, and the soy sauce rounds it all out with a salty umami kick. It's a family-friendly favorite that pairs beautifully with rice, veggies, or noodles.
 
 Whether it's a quick weeknight dinner or part of a cozy weekend meal, this dish proves that simple ingredients can deliver big flavor.`,
-    image: '/thighs.jpg',
+    image: '/Honey-Garlic-Chicken-Thighs.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
     prepTime: '5 mins',
@@ -1182,7 +1182,7 @@ Whether it's a quick weeknight dinner or part of a cozy weekend meal, this dish 
 The magic is in the simplicity: a hot pan, a well-seasoned cut of steak, and a generous spoonful of garlic herb butter that melts luxuriously over the top. It adds richness, fragrance, and that melt-in-your-mouth finish that makes every bite unforgettable.
 
 Whether you're celebrating something special or just craving a cozy, hearty dinner, this steak delivers comfort and elegance in equal measure.`,
-    image: '/steak.jpg',
+    image: '/Pan-Seared-Steak-with-Herb-Butter.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
     prepTime: '5 mins',
@@ -1265,7 +1265,7 @@ Whether you're celebrating something special or just craving a cozy, hearty dinn
 It's the perfect way to use up leftover rice and create something that feels both effortless and delicious. A hint of sesame oil and scrambled egg bring that signature fried rice taste, while the chicken adds heartiness that makes it a complete dish.
 
 Whether you're cooking for one or feeding a family, this cozy skillet favorite is always a hit — and it comes together in under 30 minutes.`,
-    image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=500&q=80',
+    image: '/Chicken-Fried-Rice.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
     prepTime: '5 mins',
@@ -1346,7 +1346,7 @@ Whether you're cooking for one or feeding a family, this cozy skillet favorite i
 This dish brings together the heartiness of a home-cooked meal with the ease of minimal cleanup. There's no need to boil pasta separately or juggle multiple pans — everything comes together right in one pot, soaking up all the savory flavor along the way.
 
 It's a satisfying, feel-good dinner that's as perfect for weeknights as it is for curling up with something delicious at the end of a long day.`,
-    image: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&q=80',
+    image: '/Creamy-One-Pot-Chicken-Pasta.jpg',
     category: 'Lunch',
     cookTime: '25 mins',
     prepTime: '5 mins',
@@ -1425,7 +1425,7 @@ It's a satisfying, feel-good dinner that's as perfect for weeknights as it is fo
 They're perfect for busy weeknights, meal prep, or as a crowd-pleasing appetizer. Serve them over rice, pasta, salad, or just enjoy straight from the skillet — no judgment here!
 
 This is comfort food done fast, without sacrificing a bit of flavor.`,
-    image: '/bites.jpg',
+    image: '/Garlic-Butter-Chicken-Bites.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
     prepTime: '5 mins',
@@ -1458,7 +1458,7 @@ This is comfort food done fast, without sacrificing a bit of flavor.`,
 This one-pan wonder is perfect for busy evenings when you want something wholesome and comforting without the fuss. It's quick to make, packed with protein and greens, and delicious served over rice or noodles.
 
 Whether you're meal prepping or making dinner on the fly, this dish brings cozy, home-cooked flavor to your table in under 30 minutes.`,
-    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80',
+    image: '/Chicken-and-Broccoli-Stirfry.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
     prepTime: '5 mins',
@@ -1540,7 +1540,7 @@ Whether you're meal prepping or making dinner on the fly, this dish brings cozy,
 Perfect for weeknights, casual dinners, or meal prep, this dish brings Tex-Mex comfort to your table without the mess of multiple pans. Top it with sour cream, avocado, or a squeeze of lime for a personal twist.
 
 It's fast, filling, and the kind of dish that makes you want seconds (and maybe thirds).`,
-    image: '/tacorice.jpg',
+    image: '/One-Pot-Taco-Rice.jpg',
     category: 'Lunch',
     cookTime: '25 mins',
     prepTime: '5 mins',
@@ -1624,7 +1624,7 @@ It's fast, filling, and the kind of dish that makes you want seconds (and maybe 
 Paired with a creamy, zesty dipping sauce, they're perfect for game night, family dinners, or anytime you're craving something warm, salty, and satisfying.
 
 Easy to prep and even easier to love, this is the kind of recipe that disappears fast — so you might want to make a double batch.`,
-    image: '/potato.jpeg',
+    image: '/Crispy-Potato-Wedges-with-Dipping-Sauce.jpeg',
     category: 'Lunch',
     cookTime: '35 mins',
     prepTime: '10 mins',
@@ -1708,7 +1708,7 @@ Easy to prep and even easier to love, this is the kind of recipe that disappears
 It's the kind of meal that warms you from the inside out, whether you're curled up on a rainy day or just craving something familiar and satisfying.
 
 Simple ingredients, quick prep, and soul-soothing flavor — this duo is a hug in a bowl (and sandwich).`,
-    image: '/tomatosoup.jpg',
+    image: '/Grilled-Cheese-with-Tomato-Soup.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
     prepTime: '5 mins',
@@ -1792,7 +1792,7 @@ Simple ingredients, quick prep, and soul-soothing flavor — this duo is a hug i
 Whether served as a hearty main or a crowd-pleasing side, this timeless recipe is always a hit. Made with simple ingredients and baked to golden perfection, it's easy enough for weeknights yet special enough for holidays.
 
 One forkful and you'll understand why it's a forever favorite.`,
-    image: '/mac.jpg',
+    image: '/Classic-Mac-n-Cheese.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
     prepTime: '10 mins',
@@ -1872,7 +1872,7 @@ One forkful and you'll understand why it's a forever favorite.`,
 It's perfect for busy weeknights, cozy dinners, or those moments when you want something delicious without the fuss. A touch of garlic, herbs, and a swirl of cream bring the whole dish together in under 30 minutes.
 
 Simple, creamy, and packed with flavor — it's a one-pot wonder you'll want to make again and again.`,
-    image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&q=80',
+    image: '/One-Pot-Creamy-Tommato-Pasta.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
     prepTime: '5 mins',
@@ -1953,7 +1953,7 @@ Simple, creamy, and packed with flavor — it's a one-pot wonder you'll want to 
 Whether served over fluffy rice or scooped up with warm naan, this curry is both budget-friendly and deeply satisfying. It's naturally vegan, easily customizable, and perfect for meal prep or weeknight dinners.
 
 Simple ingredients, bold flavor — this is comfort food with a kick.`,
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=500&q=80',
+    image: '/chickpeas-curry.jpg',
     category: 'Lunch',
     cookTime: '20 mins',
     prepTime: '10 mins',
@@ -2036,7 +2036,7 @@ Simple ingredients, bold flavor — this is comfort food with a kick.`,
 Perfect for a quick weeknight dinner or a late-night craving, it comes together in under 20 minutes and never disappoints. The olives add a pop of flavor that takes this traditional recipe to the next level.
 
 Bright, garlicky, and utterly satisfying — it's pasta at its most elegant and effortless.`,
-    image: '/spageti.jpg',
+    image: '/Spaghetti-Aglio-e-Olio-with-Green-Olives.jpg',
     category: 'Lunch',
     cookTime: '15 mins',
     prepTime: '5 mins',
@@ -2113,7 +2113,7 @@ Bright, garlicky, and utterly satisfying — it's pasta at its most elegant and 
 It's luxurious comfort in a bowl — the kind of meal that tastes like it came from your favorite restaurant but takes just 30 minutes at home.
 
 Perfect for date night, family dinners, or when you simply crave something indulgent and satisfying.`,
-    image: '/shrimp.jpg',
+    image: '/Creamy-Garlic-Shrimp-Pasta.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
     prepTime: '5 mins',
@@ -2192,7 +2192,7 @@ Perfect for date night, family dinners, or when you simply crave something indul
 It's a fuss-free recipe with big flavor, using simple ingredients you likely already have in your kitchen.
 
 Pair it with roasted veggies, rice, or a crisp salad for a balanced meal that's as comforting as it is satisfying.`,
-    image: '/lemontajs.jpg',
+    image: '/Baked-Lemon-Herb-Chicken-Thighs.jpg',
     category: 'Dinner',
     cookTime: '35 mins',
     prepTime: '10 mins',
@@ -2268,7 +2268,7 @@ Pair it with roasted veggies, rice, or a crisp salad for a balanced meal that's 
 It's a classic meal that feels like home: nourishing, satisfying, and easy enough for a weeknight dinner.
 
 Whether you're feeding a family or meal prepping for the week, this one-pot wonder is sure to become a regular favorite.`,
-    image: '/onepot.jpeg',
+    image: '/One-Pot-Chicken-&-Rice.jpeg',
     category: 'Dinner',
     cookTime: '30 mins',
     prepTime: '5 mins',
@@ -2349,7 +2349,7 @@ Whether you're feeding a family or meal prepping for the week, this one-pot wond
 Quick to make and endlessly customizable, these tacos bring bold flavor with very little effort.
 
 Whether it's Taco Tuesday or a casual weekend meal, this classic recipe always hits the spot.`,
-    image: '/taco.jpg',
+    image: '/Ground-Beef-Tacos.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
     prepTime: '5 mins',
@@ -2437,7 +2437,7 @@ Whether it's Taco Tuesday or a casual weekend meal, this classic recipe always h
 It's the kind of dish that feels elegant but couldn't be easier to make — all in one skillet for less cleanup and more flavor.
 
 Serve it over pasta, rice, or mashed potatoes for a meal that's perfect for a quiet night in or casual dinner with friends.`,
-    image: '/skilet.jpg',
+    image: '/Creamy-Chicken-&-Mushroom-Skillet.jpg',
     category: 'Dinner',
     cookTime: '30 mins',
     prepTime: '5 mins',
@@ -2517,7 +2517,7 @@ Serve it over pasta, rice, or mashed potatoes for a meal that's perfect for a qu
 With minimal ingredients and maximum goodness, it's perfect for busy weeknights or when you're craving something light yet satisfying.
 
 Healthy eating doesn't get much more delicious (or convenient) than this.`,
-    image: '/salmon.jpg',
+    image: '/Easy-Baked-Salmon-with-Veggies.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
     prepTime: '10 mins',
@@ -2595,7 +2595,7 @@ Healthy eating doesn't get much more delicious (or convenient) than this.`,
 It's a complete meal packed into a colorful, edible bowl — ideal for family dinners, meal prep, or impressing guests with something simple yet special.
 
 Comfort food with a fresh twist, straight from the oven.`,
-    image: '/pepers.jpg',
+    image: '/Stuffed-Bell-Peppers.jpg',
     category: 'Dinner',
     cookTime: '45 mins',
     prepTime: '15 mins',
@@ -2676,7 +2676,7 @@ Comfort food with a fresh twist, straight from the oven.`,
 It's ready in under 30 minutes, packed with protein and veggies, and perfect over a bed of rice or noodles. Plus, you only need one pan — easy cleanup, big flavor.
 
 A delicious way to skip the delivery and still satisfy those cravings.`,
-    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80',
+    image: '/beef-and-broccoli-stir-fry.jpg',
     category: 'Dinner',
     cookTime: '15 mins',
     prepTime: '15 mins',
@@ -2759,7 +2759,7 @@ A delicious way to skip the delivery and still satisfy those cravings.`,
 Whether it's a weeknight dinner or a Sunday family meal, this classic never disappoints — simple ingredients, soulful results.
 
 Serve it with a sprinkle of Parmesan and crusty bread for a meal that feels like home.`,
-    image: '/spagheti.jpg',
+    image: '/Spaghetti-Bolognese.jpg',
     category: 'Dinner',
     cookTime: '40 mins',
     prepTime: '15 mins',
@@ -2842,7 +2842,7 @@ Serve it with a sprinkle of Parmesan and crusty bread for a meal that feels like
 It's the kind of meal that fills the house with delicious aromas and brings everyone running to the table. Whether you're feeding a family or prepping for the week, this baked classic never fails.
 
 Easy to make, hard to resist — pasta night just got better.`,
-    image: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&q=80',
+    image: '/Cheesy-Baked-Ziti.jpg',
     category: 'Dinner',
     cookTime: '40 mins',
     prepTime: '15 mins',
@@ -2924,7 +2924,7 @@ Easy to make, hard to resist — pasta night just got better.`,
 Made with simple pantry staples and ready in under 30 minutes, this recipe delivers that perfect balance of chewiness and crunch with every bite.
 
 Warm, gooey, and utterly comforting — just like homemade should be.`,
-    image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&q=80',
+    image: '/Chocolate-Chip-Cookies.jpg',
     category: 'Desserts',
     cookTime: '12 mins',
     prepTime: '30 mins',
@@ -3004,7 +3004,7 @@ Warm, gooey, and utterly comforting — just like homemade should be.`,
 Whether served warm with a scoop of ice cream or packed as a sweet snack, these brownies are a comforting favorite that never disappoints.
 
 Simple to make, impossible to resist — this is brownie bliss, baked fresh.`,
-    image: '/brownie.jpg',
+    image: '/Classic-Brownies.jpg',
     category: 'Desserts',
     cookTime: '28 mins',
     prepTime: '15 mins',
@@ -3085,7 +3085,7 @@ Simple to make, impossible to resist — this is brownie bliss, baked fresh.`,
 Topped with a swirl of creamy frosting and a sprinkle of joy, each bite is soft, tender, and full of classic vanilla flavor.
 
 Easy to make, even easier to love — a little bite of happiness in every cupcake.`,
-    image: '/vanilakap.jpg',
+    image: '/Vanilla-Cupcakes.jpg',
     category: 'Desserts',
     cookTime: '22 mins',
     prepTime: '20 mins',
@@ -3172,7 +3172,7 @@ Easy to make, even easier to love — a little bite of happiness in every cupcak
 Whether topped with fresh berries, chocolate drizzle, or left plain and elegant, every bite melts in your mouth.
 
 Simple to make, impossible to resist — a cool slice of comfort, ready whenever you are.`,
-    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&q=80',
+    image: '/No-Bake-Cheesecake.jpg',
     category: 'Desserts',
     cookTime: '0 mins',
     prepTime: '20 mins',
@@ -3256,7 +3256,7 @@ Simple to make, impossible to resist — a cool slice of comfort, ready whenever
 With every bite, you get a balance of juicy fruit, airy cream, and just the right crumbly softness — simple ingredients layered into pure bliss.
 
 A nostalgic favorite with a homemade touch — bright, beautiful, and made to share.`,
-    image: '/shortcake.jpg',
+    image: '/Strawberry-Shortcake.jpg',
     category: 'Desserts',
     cookTime: '18 mins',
     prepTime: '30 mins',
@@ -3341,7 +3341,7 @@ A nostalgic favorite with a homemade touch — bright, beautiful, and made to sh
 Perfect for late-night treats or when you just need something warm and sweet, fast — no oven, no mess, just pure chocolate comfort in a mug.
 
 One spoonful and you'll be hooked — a little magic, one mug at a time.`,
-    image: '/magcake.jpg',
+    image: '/Chocolate-Mug-Cake.jpg',
     category: 'Desserts',
     cookTime: '90 seconds',
     prepTime: '3 mins',
@@ -3418,7 +3418,7 @@ One spoonful and you'll be hooked — a little magic, one mug at a time.`,
 It's simple, rustic, and endlessly cozy — like a warm hug in dessert form. Whether served alone or with a scoop of vanilla ice cream melting on top, it's the perfect treat for crisp autumn days or any time you're craving something sweet and nostalgic.
 
 Easy to make, impossible to resist.`,
-    image: '/applecrisp.jpg',
+    image: '/Apple-Crisp.jpg',
     category: 'Desserts',
     cookTime: '40 mins',
     prepTime: '20 mins',
@@ -3502,7 +3502,7 @@ Easy to make, impossible to resist.`,
 Made with just a few simple ingredients, they come together quickly and always disappear fast. Whether enjoyed with a cold glass of milk or tucked into a lunchbox, these cookies bring cozy, homemade joy in every bite.
 
 A childhood favorite that never goes out of style.`,
-    image: '/pinat.jpg',
+    image: '/Peanut-Butter-Cookies.jpg',
     category: 'Desserts',
     cookTime: '12 mins',
     prepTime: '15 mins',
@@ -3582,7 +3582,7 @@ A childhood favorite that never goes out of style.`,
 They're simple to make yet feel like a special treat, ideal for spring gatherings, afternoon tea, or whenever you need a burst of citrusy joy. Dust them with powdered sugar for a touch of elegance, and watch them disappear fast.
 
 Fresh, vibrant, and utterly refreshing — these bars are a slice of happiness.`,
-    image: '/lemonbars.jpg',
+    image: '/Lemon-Bars.jpg',
     category: 'Desserts',
     cookTime: '45 mins',
     prepTime: '20 mins',
@@ -3663,7 +3663,7 @@ Fresh, vibrant, and utterly refreshing — these bars are a slice of happiness.`
 Whether you're hosting friends, setting up a cozy movie night, or just craving something indulgent, this dip delivers bold flavor and melty goodness that keeps everyone coming back for more.
 
 Serve it with warm bread, crackers, or fresh veggies — and get ready for compliments (and maybe a proposal).`,
-    image: '/dip.jpg',
+    image: '/Marry-Me-Dip.jpg',
     category: 'Dinner',
     cookTime: '20 mins',
     prepTime: '10 mins',
@@ -3744,7 +3744,7 @@ Serve it with warm bread, crackers, or fresh veggies — and get ready for compl
 It's perfect for a cozy dinner, quick lunch, or meal prep for the week. Serve it with warm pita, over rice, or enjoy as-is for a satisfying, protein-packed vegetarian meal.
 
 Comforting and effortlessly delicious — this one's a keeper.`,
-    image: '/feta.jpg',
+    image: '/Baked-Feta-Chickpeas.jpg',
     category: 'Dinner',
     cookTime: '30 mins',
     prepTime: '10 mins',
@@ -3824,7 +3824,7 @@ Comforting and effortlessly delicious — this one's a keeper.`,
 It's a one-pan wonder you can enjoy on its own, pile onto toasted bread, or pair with grilled fish or chicken for a heartier meal.
 
 Simple ingredients, bold flavors — the Mediterranean way.`,
-    image: '/beans.jpg',
+    image: '/Mediterranean-White-Beans-&-Greens.jpg',
     category: 'Dinner',
     cookTime: '15 mins',
     prepTime: '10 mins',
