@@ -3896,7 +3896,7 @@ Simple ingredients, bold flavors — the Mediterranean way.`,
     tags: ['dinner', 'Mediterranean', 'white beans', 'healthy', 'vegetarian']
   },
   {
-    id: '39',
+    id: '55',
     title: 'Shakshuka (Middle Eastern Poached Eggs in Tomato Sauce)',
     description: `Shakshuka is a vibrant Middle Eastern and North African dish where eggs are gently poached in a spiced tomato and pepper sauce. It's bold, comforting, and full of flavor, often enjoyed for breakfast or brunch with warm bread for dipping.
 
