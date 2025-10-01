@@ -3894,5 +3894,84 @@ Simple ingredients, bold flavors — the Mediterranean way.`,
       }
     ],
     tags: ['dinner', 'Mediterranean', 'white beans', 'healthy', 'vegetarian']
+  },
+  {
+    id: '39',
+    title: 'Shakshuka (Middle Eastern Poached Eggs in Tomato Sauce)',
+    description: `Shakshuka is a vibrant Middle Eastern and North African dish where eggs are gently poached in a spiced tomato and pepper sauce. It's bold, comforting, and full of flavor, often enjoyed for breakfast or brunch with warm bread for dipping.
+
+This dish is loved worldwide because it's easy, healthy, and endlessly customizable. With just a few pantry ingredients, you can create a skillet meal that feels hearty yet fresh. The saucy base makes the perfect bed for creamy yolks, and every bite is balanced with spices, vegetables, and herbs.
+
+Perfect for weekend brunches, family gatherings, or when you want something that feels special but requires minimal effort.`,
+    image: '/Shakshuka.jpg',
+    category: 'Breakfast',
+    cookTime: '25 mins',
+    prepTime: '10 mins',
+    servings: 3,
+    difficulty: 'Easy',
+    ingredients: [
+      '2 tbsp olive oil',
+      '1 medium onion, finely chopped',
+      '1 red bell pepper, diced',
+      '2–3 garlic cloves, minced',
+      '1 can (400 g / 14 oz) crushed tomatoes (or 4–5 fresh tomatoes, chopped)',
+      '1 tsp ground cumin',
+      '1 tsp paprika (smoked or sweet)',
+      '½ tsp chili flakes (optional, for heat)',
+      'Salt & black pepper, to taste',
+      '4–5 large eggs',
+      'Fresh parsley or cilantro, chopped (for garnish)',
+      'Optional: crumbled feta cheese, avocado slices, or warm crusty bread for serving'
+    ],
+    instructions: [
+      'Cook vegetables: Heat olive oil in a skillet over medium heat. Add onion and bell pepper. Cook 5–7 minutes until softened and lightly caramelized.',
+      'Add spices: Stir in garlic, cumin, paprika, and chili flakes. Cook 1 minute, stirring constantly, until fragrant.',
+      'Simmer sauce: Pour in crushed tomatoes, season with salt and pepper, stir well. Reduce heat and simmer 10–15 minutes until thickened. Stir occasionally.',
+      'Add eggs: Make small wells in the sauce with a spoon. Crack eggs into a small cup first, then pour gently into each well.',
+      'Cook eggs: Cover skillet and cook 5–8 minutes until whites are set and yolks are still runny (or longer for firmer yolks).',
+      'Serve: Remove from heat. Garnish with parsley or cilantro and optional feta. Serve immediately with bread for dipping.'
+    ],
+    servingSuggestions: [
+      'Best enjoyed family-style — place the skillet in the middle of the table with bread on the side.',
+      'Pair with a light cucumber salad or fresh fruit for balance.',
+      'Add avocado slices on top for creaminess.'
+    ],
+    variations: [
+      'Cheesy Shakshuka: Add crumbled feta, goat cheese, or mozzarella on top before serving.',
+      'Green Shakshuka: Swap tomato base for spinach, kale, zucchini, and fresh herbs.',
+      'Spicy Shakshuka: Add harissa paste or extra chili peppers for heat.',
+      'Protein Boost: Stir in chickpeas, white beans, or cooked lentils to the sauce.',
+      'Meat Lover\'s: Add ground lamb, beef, or chorizo while cooking the onions and peppers.',
+      'Tomato Options: Use fresh, ripe tomatoes instead of canned for a lighter, fresher flavor.'
+    ],
+    tips: [
+      'Make the tomato sauce ahead, store in the fridge, and reheat. Add eggs only when you\'re ready to serve.',
+      'Keep the skillet covered and check every couple of minutes. Remove from heat while yolks are still jiggly.',
+      'Crusty bread, pita, or naan are perfect accompaniments.',
+      'Control the spice by adjusting chili flakes or adding fresh chilies.'
+    ],
+    faq: [
+      {
+        question: 'Can I make shakshuka ahead of time?',
+        answer: 'Yes. Make the tomato sauce ahead, store in the fridge, and reheat. Add eggs only when you\'re ready to serve.'
+      },
+      {
+        question: 'How do I keep the eggs from overcooking?',
+        answer: 'Keep the skillet covered and check every couple of minutes. Remove from heat while yolks are still jiggly.'
+      },
+      {
+        question: 'What do I serve shakshuka with?',
+        answer: 'Crusty bread, pita, or naan are perfect. You can also pair it with couscous, rice, or a fresh side salad.'
+      },
+      {
+        question: 'Can I make it vegan?',
+        answer: 'Yes — simply skip the eggs and add chickpeas or tofu for protein.'
+      },
+      {
+        question: 'Is shakshuka spicy?',
+        answer: 'Traditionally it has a mild kick, but you can control the spice by adjusting chili flakes or adding fresh chilies.'
+      }
+    ],
+    tags: ['breakfast', 'brunch', 'shakshuka', 'eggs', 'Middle Eastern', 'healthy', 'one-pan', 'vegetarian']
   }
 ];
