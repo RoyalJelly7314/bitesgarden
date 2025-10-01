@@ -301,7 +301,7 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
                  }}>
               <div className="relative mb-4 overflow-hidden rounded-lg">
                 <img
-                  src="/cinamon.jpg"
+                  src="/Cinnamon-French-Toast.jpg"
                   alt="Cinnamon French Toast"
                   className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -330,7 +330,7 @@ export const Home: React.FC<HomeProps> = ({ selectedCategory }) => {
                  }}>
               <div className="relative mb-4 overflow-hidden rounded-lg">
                 <img
-                  src="/garlicpasta.jpg"
+                  src="/Garlic-Butter-Pasta-with-Parmesan.jpg"
                   alt="Garlic Butter Pasta"
                   className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
