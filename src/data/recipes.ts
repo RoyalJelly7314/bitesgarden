@@ -3903,7 +3903,7 @@ Simple ingredients, bold flavors — the Mediterranean way.`,
 This dish is loved worldwide because it's easy, healthy, and endlessly customizable. With just a few pantry ingredients, you can create a skillet meal that feels hearty yet fresh. The saucy base makes the perfect bed for creamy yolks, and every bite is balanced with spices, vegetables, and herbs.
 
 Perfect for weekend brunches, family gatherings, or when you want something that feels special but requires minimal effort.`,
-    image: '/Shakshuka.jpg',
+    image: '/Shakshuka-Eggs.jpg',
     category: 'Breakfast',
     cookTime: '25 mins',
     prepTime: '10 mins',
