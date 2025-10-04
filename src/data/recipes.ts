@@ -3,6 +3,7 @@ export interface Recipe {
   title: string;
   description: string;
   image: string;
+  altText?: string;
   category: string;
   cookTime: string;
   prepTime: string;
@@ -3904,6 +3905,7 @@ This dish is loved worldwide because it's easy, healthy, and endlessly customiza
 
 Perfect for weekend brunches, family gatherings, or when you want something that feels special but requires minimal effort.`,
     image: '/Shakshuka-Eggs.jpg',
+    altText: 'Shakshuka in cast-iron skillet with poached eggs, tomato sauce, and parsley.',
     category: 'Breakfast',
     cookTime: '25 mins',
     prepTime: '10 mins',
